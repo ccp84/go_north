@@ -34,7 +34,9 @@ Call main()
 
 This function gives the user a keyboard input and saves to the username variable. This is checked for alphabetic only characters using `isalpha()`. If this returns true, the user is welcomed to the game and the function returns the username to the main function to contiue running. If this returns false, an error message is displayed to prompt the user to enter only alpha characters and to try again. 
 
+### verify_first_choice() function:
 
+This function gives the user the first options within the game, to start the game or display the gameplay instructions. Logic is included to check which option is returned from the user, and an else catches "other" responses to display an error and prompt the user to enter a valid response either 1 or 2 in this case. The user response is returned from input as a string and so this must be converted using `int()` before being checked by the if statement in order for the logic to evaluate correctly.
 
 
 
