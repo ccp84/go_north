@@ -36,7 +36,7 @@ This function gives the user a keyboard input and saves to the username variable
 
 ### verify_first_choice() function:
 
-This function gives the user the first options within the game, to start the game or display the gameplay instructions. Logic is included to check which option is returned from the user, and an else catches "other" responses to display an error and prompt the user to enter a valid response either 1 or 2 in this case. The user response is returned from input as a string and so this must be converted using `int()` before being checked by the if statement in order for the logic to evaluate correctly.
+This function gives the user the first options within the game, to start the game or display the gameplay instructions. Logic is included to check which option is returned from the user, and an else catches "other" responses to display an error and prompt the user to enter a valid response either 1 or 2 in this case.
 
 
 
