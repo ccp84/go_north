@@ -30,7 +30,11 @@ Call main()
 ```
 ## Project Development
 
-### 
+### verify_username() function:
+
+This function gives the user a keyboard input and saves to the username variable. This is checked for alphabetic only characters using `isalpha()`. If this returns true, the user is welcomed to the game and the function returns the username to the main function to contiue running. If this returns false, an error message is displayed to prompt the user to enter only alpha characters and to try again. 
+
+
 
 
 
