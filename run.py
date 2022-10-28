@@ -55,3 +55,10 @@ def display_option():
     Displays the current options from the Pathway object
     """
     print("Displaying current 4 options")
+
+
+def verify_response():
+    """
+    Verify user response is a b c or d
+    """
+    print("Checking user response is a b c or d")
