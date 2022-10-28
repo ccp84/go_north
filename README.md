@@ -6,6 +6,29 @@ Users will follow onscreen prompts to select an option to progress to the next s
 Overview of gameplay
 ![Gameplay Flowchart](documentation/gameplay.png)
 
+## User Stories
+
+* 
+
+## Gameplay Logic
+```
+Call main()
+    Display title screen( print to screen )
+    Input username - verifyname( check input contains alpha chars only )
+    Print Options 1 - Start 2 - How to play
+                        Display instructions( print to screen then display input options again )
+    start game()
+        Build new Game object
+        Display Game string representation
+        Print initial game option
+        User input response - verify response ( check for a, b, c, d then run Handle response() )
+        Handle response ( Check response type advance - display next set of options and increment game level counter / hold - re display same set of responses calls display opt())
+        While game level counter < 5
+            User input response - verify response()
+            Handle response()
+    End game( Display end of game message and option to re start or quit )
+```
+## 
 
 
 
