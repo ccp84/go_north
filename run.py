@@ -45,7 +45,7 @@ def start_game():
     while new_game.game_level < 5:
         display_option()
         verify_response()
-        handle_response(new_game)
+        handle_response()
         print(f"Game level is currently{new_game.game_level}")
     print("End of game flow logic")
 
@@ -62,3 +62,16 @@ def verify_response():
     Verify user response is a b c or d
     """
     print("Checking user response is a b c or d")
+
+
+def handle_response():
+    """
+    Handles the logic of game advancement
+    Call verification
+    If response is advance display next set of options
+    If response is hold display remaining options
+    """
+    verify_response()
+    print("Handling gameflow")
+    print("Advancing level")
+    new_game.game_level += 1
