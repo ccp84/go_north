@@ -48,3 +48,10 @@ def start_game():
         handle_response(new_game)
         print(f"Game level is currently{new_game.game_level}")
     print("End of game flow logic")
+
+
+def display_option():
+    """
+    Displays the current options from the Pathway object
+    """
+    print("Displaying current 4 options")
