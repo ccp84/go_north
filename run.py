@@ -9,7 +9,13 @@ def verify_username():
     """
     Take in username and check contents
     """
-    print("Username verification running")
+    username = input("What is your name?\n ")
+    if username.isalpha():
+        print(f"Hi {username}")
+    else:
+        print("ERROR name must contain letters only")
+        verify_username()
+    return username
 
 
 def verify_first_choice():
@@ -82,8 +88,7 @@ def main():
     Initiates main gameflow
     """
     display_title_screen()
-    input("What is your name?\n ")
-    verify_username()
+    username = verify_username()
     verify_first_choice()
 
 
