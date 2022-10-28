@@ -78,6 +78,9 @@ def handle_response():
 
 
 def main():
+    """
+    Initiates main gameflow
+    """
     display_title_screen()
     input("What is your name?\n ")
     verify_username()
@@ -96,3 +99,16 @@ class Game:
     def __repr__(self):
         return "Print the class string here"
 
+
+class Pathway:
+    """
+    Builds a new path through the game
+    Contains a dict of 5 sets of 4 pairs
+    Pulls options from pathway file to build pairs at random
+    """
+    def __init__(self):
+        self.options = {}
+    # Method here to build the options dict from a file
+
+
+main()
