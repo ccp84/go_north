@@ -16,7 +16,7 @@ def verify_first_choice():
     """
     Check user selects 1 or 2 and then respond with action
     """
-    choice = input("Start Game - 1   How to play - 2\n")
+    choice = input("Start Game - 1   How to play - 2\n ")
     if choice == 1:
         start_game()
     elif choice == 2:
@@ -24,3 +24,11 @@ def verify_first_choice():
     else:
         print("ERROR please enter 1 or 2")
         verify_first_choice()
+
+
+def display_instructions():
+    """
+    Prints game instructions to screen
+    """
+    print("Game Instructions here")
+    verify_first_choice()
