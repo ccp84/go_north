@@ -32,3 +32,19 @@ def display_instructions():
     """
     print("Game Instructions here")
     verify_first_choice()
+
+
+def start_game():
+    """
+    Builds game object and game path
+    """
+    print("New game building...")
+    new_game = Game()
+    print(new_game)
+
+    while new_game.game_level < 5:
+        display_option()
+        verify_response()
+        handle_response(new_game)
+        print(f"Game level is currently{new_game.game_level}")
+    print("End of game flow logic")
