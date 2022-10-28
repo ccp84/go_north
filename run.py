@@ -82,3 +82,17 @@ def main():
     input("What is your name?\n ")
     verify_username()
     verify_first_choice()
+
+
+class Game:
+    """
+    Builds a new Game
+    """
+    def __init__(self):
+        self.username = "Username"
+        self.game_level = 0
+        self.gamepath = Pathway()
+
+    def __repr__(self):
+        return "Print the class string here"
+
