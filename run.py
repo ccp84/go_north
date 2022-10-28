@@ -75,3 +75,10 @@ def handle_response():
     print("Handling gameflow")
     print("Advancing level")
     new_game.game_level += 1
+
+
+def main():
+    display_title_screen()
+    input("What is your name?\n ")
+    verify_username()
+    verify_first_choice()
