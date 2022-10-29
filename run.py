@@ -18,34 +18,39 @@ def verify_username():
     return username
 
 
-def verify_first_choice():
+def verify_first_choice(name):
     """
     Check user selects 1 or 2 and then respond with action
     """
+    username = name
     choice = input("Start Game - 1   How to play - 2\n ")
     if choice == '1':
-        start_game()
+        start_game(username)
     elif choice == '2':
-        display_instructions()
+        display_instructions(username)
     else:
         print("ERROR please enter 1 or 2")
-        verify_first_choice()
+        verify_first_choice(username)
 
 
-def display_instructions():
+def display_instructions(name):
     """
     Prints game instructions to screen
     """
-    print("Game Instructions here")
-    verify_first_choice()
+    print("""
+    Game instructions
+    as a big long string
+    go in here
+    """)
+    verify_first_choice(name)
 
 
-def start_game():
+def start_game(username):
     """
     Builds game object and game path
     """
     print("New game building...")
-    new_game = Game()
+    new_game = Game(username)
     print(new_game)
 
     while new_game.game_level < 5:
@@ -89,20 +94,20 @@ def main():
     """
     display_title_screen()
     username = verify_username()
-    verify_first_choice()
+    verify_first_choice(username)
 
 
 class Game:
     """
     Builds a new Game
     """
-    def __init__(self):
-        self.username = "Username"
+    def __init__(self, name):
+        self.name = name
         self.game_level = 0
         self.gamepath = Pathway()
 
     def __repr__(self):
-        return "Print the class string here"
+        return f"Welcome to the game {self.name}"
 
 
 class Pathway:
