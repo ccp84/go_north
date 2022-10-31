@@ -55,7 +55,6 @@ def start_game(username):
 
     while new_game.game_level < 5:
         display_option(new_game)
-        choice = verify_response()
         handle_response(new_game)
         print(f"Game level is currently{new_game.game_level}")
     print("End of game flow logic")

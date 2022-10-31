@@ -11,6 +11,9 @@
 * [verify_first_choice() enter a letter](https://github.com/ccp84/go_north/issues/3)
 ![Issue 3 screenshot](documentation/issue_3.png)
 
+* [display_option() runs twice in game play flow](https://github.com/ccp84/go_north/issues/4)
+![Issue 4 screenshot](documentation/issue_4.png)
+
 ## Manual Testing
 
 * Username input - an if statement checks that only alpha characters are entered and displays an error message if this check returns false. Tests proved to only accept alpha characters as below.
