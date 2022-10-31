@@ -21,3 +21,6 @@
 
 * Choosing between 'Start Game' and 'How to Play' - an input box takes the users choice for which action to perform and then checks the response. An if/elif/else statement handles the response. If an invalid option is entered, an error message is displayed and the user is prompted to try again. 
 ![Initial choice testing](documentation/initial_choice_testing.png)
+
+* Choosing a b c or d as the game path option - the verify choice function checks `if` input matches a, b, c or d. Otherwise an error message is displayed on screen and a prompt to the user to enter a valid option and another chance to input their choice again. 
+![User path testing](documentation/game_path_choice_test.png)
