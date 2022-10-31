@@ -88,7 +88,12 @@ def handle_response(current_game):
     If response is advance display next set of options
     If response is hold display remaining options
     """
-    verify_response()
+    choice = verify_response()
+    current_path = current_game.gamepath
+    current_options_set = path.option[current_game.game_level]
+    selected_option = "current_options_set get the response that goes with the letter selected"
+    
+        
     print("Handling gameflow")
     print("Advancing level")
     current_game.game_level += 1
@@ -123,7 +128,13 @@ class Pathway:
     Pulls options from pathway file to build option sets at random
     """
     def __init__(self):
-        self.options = [[["a", 1, True], ["b", 2, False], ["c", 3, True], ["d", 4, True]], [["a", 1, False], ["b", 2, True], ["c", 3, True], ["d", 4, True]], [["a", 1, True], ["b", 2, True], ["c", 3, True], ["d", 4, True]], [["a", 1, True], ["b", 2, False], ["c", 3, True], ["d", 4, False]], [["a", 1, True], ["b", 2, True], ["c", 3, False], ["d", 4, True]]]
+        self.options = {
+            {1 : {"a" : [1, True], "b" : [2, False], "c" : [3, True], "d" : [4, True]}}
+            {2 : {"a" : [1, False], "b" : [2, True], "c" : [3, True], "d" : [4, True]}}
+            {3 : {"a" : [1, False], "b" : [2, True], "c" : [3, False], "d" : [4, True]}}
+            {4 : {"a" : [1, True], "b" : [2, True], "c" : [3, True], "d" : [4, False]}}
+            {5 : {"a" : [1, True], "b" : [2, False], "c" : [3, True], "d" : [4, True]}}
+        }
     # Method here to build the options dict from a file
 
 

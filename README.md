@@ -49,6 +49,11 @@ This function asks for a choice from the available game path choices displayed b
 
 
 
+## Credits
+
+* Isalpha for checking username https://www.w3schools.com/python/ref_string_isalpha.asp#:~:text=The%20isalpha()%20method%20returns,alphabet%20letters%3A%20(space)!
+
+
 
 
 
