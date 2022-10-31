@@ -86,8 +86,8 @@ def handle_response(current_game):
     """
     Handles the logic of game advancement
     Call verification
-    If response is advance display next set of options
-    If response is hold display remaining options
+    If response True is advance display next set of options
+    If response is False. Game over. Take user back to start game screen.
     """
     choice = verify_response()
     current_path = current_game.gamepath.options[current_game.game_level+1]
