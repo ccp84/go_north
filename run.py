@@ -2,14 +2,14 @@ def display_title_screen():
     """
     Prints out the title screen of the game
     """
-    print("Title screen function running")
+    print("\n Title screen function running \n ")
 
 
 def verify_username():
     """
     Take in username and check contents
     """
-    username = input("What is your name?\n ")
+    username = input(" \nWhat is your name? \n ")
     if username.isalpha():
         print(f"Hi {username}")
     else:
@@ -23,13 +23,13 @@ def verify_first_choice(name):
     Check user selects 1 or 2 and then respond with action
     """
     username = name
-    choice = input("Start Game - 1   How to play - 2\n ")
+    choice = input("\n Start Game - 1   How to play - 2 \n:")
     if choice == '1':
         start_game(username)
     elif choice == '2':
         display_instructions(username)
     else:
-        print("ERROR please enter 1 or 2")
+        print("\n ERROR please enter 1 or 2 \n")
         verify_first_choice(username)
 
 
@@ -49,15 +49,14 @@ def start_game(username):
     """
     Builds game object and game path
     """
-    print("New game building...")
+    print("\n New game building... \n")
     new_game = Game(username)
     print(new_game)
 
     while new_game.game_level < 5:
         display_option(new_game)
         handle_response(new_game)
-        print(f"Game level is currently{new_game.game_level}")
-    print("End of game flow logic")
+    print("\n Glory and admiration \n")
 
 
 def display_option(current_game):
@@ -78,11 +77,11 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("a, b, c, d \n")
+        option = input("\n a, b, c, d \n")
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
-            print("Error please enter a b c or d")
+            print("\n Error please enter a b c or d \n")
     return option
 
 
@@ -98,10 +97,9 @@ def handle_response(current_game):
     outcome = current_path[choice]
     print(f"This is the storyline response to your choice {outcome[1]}")
     if outcome[1]:
-        print("Advancing level")
         current_game.game_level += 1
     else:
-        print("You died. Game over. Better luck next time")
+        print("\n You died. Game over. Better luck next time \n")
         verify_first_choice(current_game.name)
 
 
