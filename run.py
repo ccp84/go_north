@@ -64,9 +64,10 @@ def display_option(current_game):
     """
     Displays the current options from the Pathway object
     """
-    display_level = current_game.game_level
-    game_path = current_game.gamepath.options
-    print(game_path[display_level])
+    print("Come back and fix this later")
+    # display_level = current_game.game_level
+    # game_path = current_game.gamepath.options
+    # print(game_path[display_level])
 
 
 def verify_response():
@@ -89,14 +90,15 @@ def handle_response(current_game):
     If response is hold display remaining options
     """
     choice = verify_response()
-    current_path = current_game.gamepath
-    current_options_set = path.option[current_game.game_level]
-    selected_option = "current_options_set get the response that goes with the letter selected"
-    
-        
-    print("Handling gameflow")
-    print("Advancing level")
-    current_game.game_level += 1
+    current_path = current_game.gamepath.options[current_game.game_level+1]
+    outcome = current_path[choice]
+    print(f"This is the storyline response to your choice {outcome[0]}")
+    if outcome[1]:
+        print("Advancing level")
+        current_game.game_level += 1
+    else:
+        print("You died. Game over. Better luck next time")
+        verify_first_choice(current_game.name)
 
 
 def main():
@@ -129,11 +131,11 @@ class Pathway:
     """
     def __init__(self):
         self.options = {
-            {1 : {"a" : [1, True], "b" : [2, False], "c" : [3, True], "d" : [4, True]}}
-            {2 : {"a" : [1, False], "b" : [2, True], "c" : [3, True], "d" : [4, True]}}
-            {3 : {"a" : [1, False], "b" : [2, True], "c" : [3, False], "d" : [4, True]}}
-            {4 : {"a" : [1, True], "b" : [2, True], "c" : [3, True], "d" : [4, False]}}
-            {5 : {"a" : [1, True], "b" : [2, False], "c" : [3, True], "d" : [4, True]}}
+            1: {"a": [1, True], "b": [2, False], "c": [3, True], "d": [4, True]},
+            2: {"a": [1, False], "b": [2, True], "c": [3, True], "d": [4, True]},
+            3: {"a": [1, False], "b": [2, True], "c": [3, False], "d": [4, True]},
+            4: {"a": [1, True], "b": [2, True], "c": [3, True], "d": [4, False]},
+            5: {"a": [1, True], "b": [2, False], "c": [3, True], "d": [4, True]}
         }
     # Method here to build the options dict from a file
 
