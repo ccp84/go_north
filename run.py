@@ -54,18 +54,21 @@ def start_game(username):
     print(new_game)
 
     while new_game.game_level < 5:
-        display_option()
+        display_option(new_game)
         verify_response()
         handle_response(new_game)
         print(f"Game level is currently{new_game.game_level}")
     print("End of game flow logic")
 
 
-def display_option():
+def display_option(current_game):
     """
     Displays the current options from the Pathway object
     """
-    print("Displaying current 4 options")
+    display_level = current_game.game_level
+    print(f"Game level is {current_game.game_level} Display level is {display_level}")
+    game_path = current_game.gamepath.options
+    print(game_path[display_level])
 
 
 def verify_response():
@@ -113,11 +116,11 @@ class Game:
 class Pathway:
     """
     Builds a new path through the game
-    Contains a dict of 5 sets of 4 pairs
-    Pulls options from pathway file to build pairs at random
+    Contains a list of 5 lists with 4 sets of options in each
+    Pulls options from pathway file to build option sets at random
     """
     def __init__(self):
-        self.options = {}
+        self.options = [[["a", 1, True], ["b", 2, False], ["c", 3, True], ["d", 4, True]], [["a", 1, False], ["b", 2, True], ["c", 3, True], ["d", 4, True]], [["a", 1, True], ["b", 2, True], ["c", 3, True], ["d", 4, True]], [["a", 1, True], ["b", 2, False], ["c", 3, True], ["d", 4, False]], [["a", 1, True], ["b", 2, True], ["c", 3, False], ["d", 4, True]]]
     # Method here to build the options dict from a file
 
 
