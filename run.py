@@ -55,7 +55,7 @@ def start_game(username):
 
     while new_game.game_level < 5:
         display_option(new_game)
-        verify_response()
+        choice = verify_response()
         handle_response(new_game)
         print(f"Game level is currently{new_game.game_level}")
     print("End of game flow logic")
@@ -66,7 +66,6 @@ def display_option(current_game):
     Displays the current options from the Pathway object
     """
     display_level = current_game.game_level
-    print(f"Game level is {current_game.game_level} Display level is {display_level}")
     game_path = current_game.gamepath.options
     print(game_path[display_level])
 
@@ -75,7 +74,12 @@ def verify_response():
     """
     Verify user response is a b c or d
     """
-    print("Checking user response is a b c or d")
+    option = input("a, b, c, d \n")
+    if option == "a" or option == "b" or option == "c" or option == "d":
+        return option
+    else:
+        print("Error please enter a b c or d")
+        verify_response()
 
 
 def handle_response(current_game):
