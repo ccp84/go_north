@@ -57,6 +57,7 @@ def start_game(username):
         display_option(new_game)
         handle_response(new_game)
     print("\n Glory and admiration \n")
+    verify_first_choice(username)
 
 
 def display_option(current_game):
@@ -96,7 +97,7 @@ def handle_response(current_game):
     current_path = current_game.gamepath.options[current_game.game_level+1]
     outcome = current_path[choice]
     print(f"This is the storyline response to your choice {outcome[1]}")
-    if outcome[1]:
+    if outcome[2]:
         current_game.game_level += 1
     else:
         print("\n You died. Game over. Better luck next time \n")
