@@ -144,7 +144,7 @@ class Pathway:
     def __init__(self):
         self.options = {
             1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
-            2: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
+            2: {"a": ["This is an option", "You continue your search", True], "b": ["This one will kill you", "I have no choice but to inform you...", False], "c": ["This is also an option", "You continue your search", True], "d": ["This is an option too", "You continue your search", True]},
             3: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
             4: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
             5: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]}
