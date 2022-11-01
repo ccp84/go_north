@@ -2,8 +2,6 @@
 Go North
 A text based adventure game for Code Institute PP3
 """
-import csv
-import random
 
 
 def display_title_screen():

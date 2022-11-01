@@ -1,8 +1,11 @@
+import csv
+import random
+
 def build_story():
-    with open("positive.csv") as positive:
-        positive_file = csv.DictReader(positive)
-        for row in positive_file:
-            print(row)
+    with open("positive.txt") as positive:
+        for line in positive:
+            new_line = line.strip('\n')
+            print(new_line.split("*"))
 
 
 build_story()
