@@ -2,7 +2,15 @@ def display_title_screen():
     """
     Prints out the title screen of the game
     """
-    print("\n Title screen function running \n ")
+    print("""
+     GGG    OOO    N   N   OOO   RRRR   TTTTT  H   H
+    G   G  O   O   NN  N  O   O  R   R    T    H   H
+    G      O   O   N N N  O   O  R   R    T    H   H
+    GGGGG  O   O   N  NN  O   O  RRRR     T    HHHHH
+    G   G  O   O   N   N  O   O  R R      T    H   H
+    G   G  O   O   N   N  O   O  R  R     T    H   H
+     GGG    OOO    N   N   OOO   R   R    T    H   H
+     """)
 
 
 def verify_username():
@@ -56,6 +64,7 @@ def start_game(username):
     while new_game.game_level < 5:
         display_option(new_game)
         handle_response(new_game)
+        new_game.game_level += 1
     print("\n Glory and admiration \n")
     verify_first_choice(username)
 
@@ -98,7 +107,7 @@ def handle_response(current_game):
     outcome = current_path[choice]
     print(f"This is the storyline response to your choice {outcome[1]}")
     if outcome[2]:
-        current_game.game_level += 1
+        return
     else:
         print("\n You died. Game over. Better luck next time \n")
         verify_first_choice(current_game.name)
