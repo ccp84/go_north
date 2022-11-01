@@ -58,6 +58,7 @@ This function calls on the `verify_response()` function to gain the users next v
 * Isalpha for checking username https://www.w3schools.com/python/ref_string_isalpha.asp#:~:text=The%20isalpha()%20method%20returns,alphabet%20letters%3A%20(space)!
 * Storyline idea and sarcasm - https://www.thejohnrobertson.com/thedarkroom/
 * Block letters https://www.codecademy.com/courses/learn-python-3/projects/python-block-letters
+* File handling method https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-files/
 
 
 
