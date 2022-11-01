@@ -46,9 +46,9 @@ def display_instructions(name):
     Prints game instructions to screen
     """
     print("""
-    Game instructions
-    as a big long string
-    go in here
+    Follow the story.
+    Select a, b, c or d at each turn.
+    Find the lightswitch.
     """)
     verify_first_choice(name)
 
@@ -65,7 +65,7 @@ def start_game(username):
         display_option(new_game)
         handle_response(new_game)
         new_game.game_level += 1
-    print("\n Glory and admiration \n")
+    print("\n Glory and admiration is yours \n")
     verify_first_choice(username)
 
 
@@ -87,7 +87,7 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("\n a, b, c, d \n")
+        option = input("\n Which path will you take? \n")
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
@@ -105,7 +105,7 @@ def handle_response(current_game):
     choice = verify_response()
     current_path = current_game.gamepath.options[current_game.game_level+1]
     outcome = current_path[choice]
-    print(f"This is the storyline response to your choice {outcome[1]}")
+    print(outcome[1])
     if outcome[2]:
         return
     else:
@@ -132,7 +132,7 @@ class Game:
         self.gamepath = Pathway()
 
     def __repr__(self):
-        return f"Welcome to the game {self.name}"
+        return "You awake to find yourself in a dark room..."
 
 
 class Pathway:
@@ -143,7 +143,7 @@ class Pathway:
     """
     def __init__(self):
         self.options = {
-            1: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
+            1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
             2: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
             3: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
             4: {"a": ["Story a", "Response a", True], "b": ["Story b", "Response b", False], "c": ["Story c", "Response c", True], "d": ["Story d", "Response d ", True]},
