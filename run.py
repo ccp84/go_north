@@ -2,6 +2,8 @@
 Go North
 A text based adventure game for Code Institute PP3
 """
+import csv
+import random
 
 
 def display_title_screen():
@@ -155,7 +157,6 @@ class Pathway:
             4: {"a": ["Go south", "In the darkness, you walk headfirst into the southern wall", False], "b": ["Enter cheat code", "Level Skip", True], "c": ["Talk to NPC", "Side Quest Activated", True], "d": ["Save Game", "The game is beyond saving really", True]},
             5: {"a": ["Kick Wall", "You broke the 4th wall", False], "b": ["Inventory", "Lightswitch", True], "c": ["Abandon Hope", "You lean on the wall and weep, knocking the lightswitch on as you do", True], "d": ["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do", True]}
         }
-    # Method here to build the options dict from a file
 
 
 main()
