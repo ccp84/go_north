@@ -35,14 +35,11 @@ def build_story():
             new_line = line.strip('\n')
             winning.append(new_line)
     random.shuffle(winning)
-    print(winning)
-    print(current_level)
     ending.extend([winning[0], winning[1], negatives[current_level], negatives[current_level + 1]])
-    print(ending)
     storyline[current_level] = {
         "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
     }
-    print(storyline)
+    return storyline
 
 
 build_story()

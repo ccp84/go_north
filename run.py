@@ -2,6 +2,7 @@
 Go North
 A text based adventure game for Code Institute PP3
 """
+from story import build_story
 
 
 def display_title_screen():
@@ -147,6 +148,10 @@ class Pathway:
     Contains a list of 5 lists with 4 sets of options in each
     Pulls options from pathway file to build option sets at random
     """
+
+    # def __init__(self):
+    #     self.options = build_story()
+
     def __init__(self):
         self.options = {
             1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
@@ -158,3 +163,5 @@ class Pathway:
 
 
 main()
+#story = build_story()
+#print(story)
