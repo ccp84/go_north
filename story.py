@@ -1,7 +1,6 @@
 import random
 
 def build_story():
-    storyline = []
     positives = []
     negatives = []
     with open("positive.txt") as positive:
@@ -15,7 +14,11 @@ def build_story():
     random.shuffle(positives)
     random.shuffle(negatives)
     print(positives[0])
-    print(negatives)
+    print(negatives[0])
+    storyline = {
+        1: {"a": positives[0], "b": negatives[0]}
+    }
+    print(storyline)
 
 
 
