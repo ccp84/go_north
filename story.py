@@ -28,15 +28,20 @@ def build_story():
             "a": level_options[0], "b": level_options[1], "c": level_options[2], "d": level_options[3]
             }
         current_level += 1
-    #ending = []
-    # with open("winners.txt") as winners:
-    #     for line in winners:
-    #         new_line = line.strip('\n')
-    #         ending.append(new_line)
-    # random.shuffle(ending)
-    # storyline[current_level] = {
-
-    # }
+    winning = []
+    ending = []
+    with open("winners.txt") as winners:
+        for line in winners:
+            new_line = line.strip('\n')
+            winning.append(new_line)
+    random.shuffle(winning)
+    ending + [winning[1], winning[2], negatives[current_level], negatives[current_level + 1]]
+    random.shuffle(ending)
+    print(winning)
+    print(ending)
+    storyline[current_level] = {
+        "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
+    }
     print(storyline)
 
 
