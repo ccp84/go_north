@@ -42,7 +42,9 @@ def build_story():
     string_dict = str(storyline)
     string_replace_start = string_dict.replace("'[", "[")
     string_replace_end = string_replace_start.replace("]'", "]")
-    print(string_replace_end)
+    #print(string_replace_end)
+    new_dict = dict(string_replace_end)
+    print(new_dict)
 
 
 build_story()
