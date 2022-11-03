@@ -3,3 +3,4 @@
 ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True]
 ["Sleep", "You awake to find yourself in a dark room", True]
 ["This is an option", "You continue your search", True]
+["Yellow brick road", "Finish this story", True]

@@ -6,7 +6,6 @@ def build_story():
         for line in positive:
             new_line = line.strip('\n')
             storyline.append(new_line)
-    print(storyline)
     random.shuffle(storyline)
     print(storyline)
 
