@@ -60,6 +60,7 @@ This function calls on the `verify_response()` function to gain the users next v
 * Block letters https://www.codecademy.com/courses/learn-python-3/projects/python-block-letters
 * File handling method https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-files/
 * Shuffle https://www.w3schools.com/python/ref_random_shuffle.asp
+* Replace https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/exercises/replace
 
 
 

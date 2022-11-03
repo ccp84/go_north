@@ -39,7 +39,10 @@ def build_story():
     storyline[current_level] = {
         "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
     }
-    print(storyline)
+    string_dict = str(storyline)
+    string_replace_start = string_dict.replace("'[", "[")
+    string_replace_end = string_replace_start.replace("]'", "]")
+    print(string_replace_end)
 
 
 build_story()
