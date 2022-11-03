@@ -1,5 +1,6 @@
 import random
 
+
 def build_story():
     positives = []
     negatives = []
@@ -13,13 +14,21 @@ def build_story():
             negatives.append(new_line)
     random.shuffle(positives)
     random.shuffle(negatives)
-    print(positives[0])
-    print(negatives[0])
-    storyline = {
-        1: {"a": positives[0], "b": negatives[0]}
-    }
+    current_level = 1
+    storyline = {}
+    while current_level < 4:
+        level_options = []
+        i = 0
+        while i < 3:
+            level_options.append(positives[i])
+            i += 1
+        level_options.append(negatives[current_level])
+        random.shuffle(level_options)
+        storyline[current_level] = {
+            "a": level_options[0], "b": level_options[1], "c": level_options[2], "d": level_options[3]
+            }
+        current_level += 1
     print(storyline)
-
 
 
 build_story()
