@@ -6,3 +6,4 @@
 ["Go south", "In the darkness, you walk headfirst into the southern wall", False]
 ["Czech pockets", "Your pockets were made in the Czech republic, but that won't help you now.", False]
 ["This one will kill you", "I have no choice but to inform you...", False]
+["This one will kill you", "I have no choice but to inform you...", False]
