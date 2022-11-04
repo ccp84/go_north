@@ -6,6 +6,11 @@ import ast
 def build_story():
     positives = []
     negatives = []
+    """
+    Read in positive/negative text file,
+    Create a new list of each line
+    Shuffle
+    """
     with open("positive.txt") as positive:
         for line in positive:
             new_line = line.strip('\n')
@@ -16,6 +21,12 @@ def build_story():
             negatives.append(new_line)
     random.shuffle(positives)
     random.shuffle(negatives)
+    """
+    Initialise level and blank storyline dictionary
+    Loop creates each level as a list of 3 positive, 1 negative
+    Shuffle, then add level to storyline
+    Increment level indicator until full story - 1 has been built
+    """
     current_level = 1
     storyline = {}
     while current_level < 4:
@@ -39,6 +50,12 @@ def build_story():
             "d": ast.literal_eval(level_options[3])
         }
         current_level += 1
+    """
+    Open and read in winning options text file, shuffle.
+    Create a container for final level.
+    Build final level containing 2 winning, 2 negative options.
+    Shuffle ending level and add to storyline dictionary
+    """
     winning = []
     ending = []
     with open("winners.txt") as winners:
