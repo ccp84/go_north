@@ -14,6 +14,9 @@
 * [display_option() runs twice in game play flow](https://github.com/ccp84/go_north/issues/4)
 ![Issue 4 screenshot](documentation/issue_4.png)
 
+* [Issue appending to dictionary adding apostrophes](https://github.com/ccp84/go_north/issues/5)
+![Issue 5 screenshot](documentation/issue_5.png)
+
 ## Manual Testing
 
 * Username input - an if statement checks that only alpha characters are entered and displays an error message if this check returns false. Tests proved to only accept alpha characters as below.
