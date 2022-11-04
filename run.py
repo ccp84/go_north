@@ -24,7 +24,7 @@ def verify_username():
     """
     Take in username and check contents
     """
-    username = input(" \nWhat is your name? \n ")
+    username = input("\nWhat is your name?\n:")
     if username.isalpha():
         print(f"Hi {username}")
     else:
@@ -38,13 +38,13 @@ def verify_first_choice(name):
     Check user selects 1 or 2 and then respond with action
     """
     username = name
-    choice = input("\n Start Game - 1   How to play - 2 \n:")
+    choice = input("\n Start Game - 1   How to play - 2\n:")
     if choice == '1':
         start_game(username)
     elif choice == '2':
         display_instructions(username)
     else:
-        print("\n ERROR please enter 1 or 2 \n")
+        print(f"\nERROR {choice} is an invalid choice. Please enter 1 or 2\n")
         verify_first_choice(username)
 
 
@@ -94,11 +94,11 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("\n Which path will you take? \n")
+        option = input("\nWhich path will you take?\n").lower()
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
-            print("\n Error please enter a b c or d \n")
+            print(f"\nError {option} is not valid. Please enter a b c or d\n")
     return option
 
 
@@ -116,7 +116,7 @@ def handle_response(current_game):
     if outcome[2]:
         return
     else:
-        print("\n You died. Game over. Better luck next time \n")
+        print("\nYou died. Game over. Better luck next time\n")
         verify_first_choice(current_game.name)
 
 
@@ -151,15 +151,6 @@ class Pathway:
 
     def __init__(self):
         self.options = build_story()
-
-    # def __init__(self):
-    #     self.options = {
-    #         1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
-    #         2: {"a": ["This is an option", "You continue your search", True], "b": ["This one will kill you", "I have no choice but to inform you...", False], "c": ["This is also an option", "You continue your search", True], "d": ["This is an option too", "You continue your search", True]},
-    #         3: {"a": ["Touch the wall", "You cant find the wall, you're in a dark room", True], "b": ["Czech pockets", "Your pockets were made in the Czech republic, but that won't help you now.", False], "c": ["Turn on the light", "How can you find the lightswitch, you're in a dark room?", True], "d": ["Weep", "You stand in the dark and weep", True]},
-    #         4: {"a": ["Go south", "In the darkness, you walk headfirst into the southern wall", False], "b": ["Enter cheat code", "Level Skip", True], "c": ["Talk to NPC", "Side Quest Activated", True], "d": ["Save Game", "The game is beyond saving really", True]},
-    #         5: {"a": ["Kick Wall", "You broke the 4th wall", False], "b": ["Inventory", "Lightswitch", True], "c": ["Abandon Hope", "You lean on the wall and weep, knocking the lightswitch on as you do", True], "d": ["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do", True]}
-    #     }
 
 
 main()
