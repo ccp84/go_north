@@ -149,8 +149,6 @@ class Pathway:
     Pulls options from pathway file to build option sets at random
     """
 
-    # def __init__(self):
-    #     self.options = build_story()
 
     def __init__(self):
         self.options = {
@@ -163,5 +161,3 @@ class Pathway:
 
 
 main()
-#story = build_story()
-#print(story)

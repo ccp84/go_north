@@ -16,17 +16,35 @@ def build_story():
     random.shuffle(negatives)
     current_level = 1
     storyline = {}
+    # while current_level < 4:
+    #     level_options = []
+    #     i = 1
+    #     while i <= 3:
+    #         level_options.append(positives[i + (i * current_level)])
+    #         i += 1
+    #     level_options.append(negatives[current_level])
+    #     random.shuffle(level_options)
+    #     storyline[current_level] = {
+    #         "a": level_options[0],
+    #         "b": level_options[1],
+    #         "c": level_options[2],
+    #         "d": level_options[3]}
+    #     print(storyline[current_level])
+    #     current_level += 1
     while current_level < 4:
         level_options = []
+        storyline[current_level] = {"a": list(), "b": list(), "c": list(), "d": list()}
         i = 1
         while i <= 3:
             level_options.append(positives[i + (i * current_level)])
             i += 1
         level_options.append(negatives[current_level])
         random.shuffle(level_options)
-        storyline[current_level] = {
-            "a": level_options[0], "b": level_options[1], "c": level_options[2], "d": level_options[3]
-            }
+        storyline[current_level]["a"] = level_options[0]
+        storyline[current_level]["b"] = level_options[1]
+        storyline[current_level]["c"] = level_options[2]
+        storyline[current_level]["d"] = level_options[3]
+        print(storyline[current_level])
         current_level += 1
     winning = []
     ending = []
@@ -35,16 +53,19 @@ def build_story():
             new_line = line.strip('\n')
             winning.append(new_line)
     random.shuffle(winning)
-    ending.extend([winning[0], winning[1], negatives[current_level], negatives[current_level + 1]])
+    ending.extend([winning[0],
+                   winning[1],
+                   negatives[current_level],
+                   negatives[current_level + 1]])
     storyline[current_level] = {
         "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
     }
-    string_dict = str(storyline)
-    string_replace_start = string_dict.replace("'[", "[")
-    string_replace_end = string_replace_start.replace("]'", "]")
-    #print(string_replace_end)
-    new_dict = dict(string_replace_end)
-    print(new_dict)
+    # string_dict = str(storyline)
+    # string_replace_start = string_dict.replace("'[", "[")
+    # string_replace_end = string_replace_start.replace("]'", "]")
+    # # print(string_replace_end)
+    # new_dict = dict(string_replace_end)
+    # print(new_dict)
 
 
 build_story()
