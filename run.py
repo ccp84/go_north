@@ -68,7 +68,7 @@ def start_game(username):
     new_game = Game(username)
     print(new_game)
 
-    while new_game.game_level < 5:
+    while new_game.game_level < 4:
         display_option(new_game)
         handle_response(new_game)
         new_game.game_level += 1

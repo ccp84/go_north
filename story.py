@@ -51,7 +51,10 @@ def build_story():
                    negatives[current_level],
                    negatives[current_level + 1]])
     storyline[current_level] = {
-        "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
+        "a": ast.literal_eval(ending[0]), 
+        "b": ast.literal_eval(ending[1]), 
+        "c": ast.literal_eval(ending[2]),
+        "d": ast.literal_eval(ending[3])
     }
     return storyline
 
