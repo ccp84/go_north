@@ -2,7 +2,7 @@
 Go North
 A text based adventure game for Code Institute PP3
 """
-#from story import build_story
+from story import build_story
 
 
 def display_title_screen():
@@ -148,7 +148,6 @@ class Pathway:
     Contains a list of 5 lists with 4 sets of options in each
     Pulls options from pathway file to build option sets at random
     """
-
 
     def __init__(self):
         self.options = {
