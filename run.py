@@ -2,7 +2,7 @@
 Go North
 A text based adventure game for Code Institute PP3
 """
-from story import build_story
+#from story import build_story
 
 
 def display_title_screen():
