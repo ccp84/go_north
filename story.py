@@ -53,6 +53,7 @@ def build_story():
     storyline[current_level] = {
         "a": ending[0], "b": ending[1], "c": ending[2], "d": ending[3]
     }
+    return storyline
 
 
 build_story()

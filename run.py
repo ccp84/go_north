@@ -150,13 +150,16 @@ class Pathway:
     """
 
     def __init__(self):
-        self.options = {
-            1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
-            2: {"a": ["This is an option", "You continue your search", True], "b": ["This one will kill you", "I have no choice but to inform you...", False], "c": ["This is also an option", "You continue your search", True], "d": ["This is an option too", "You continue your search", True]},
-            3: {"a": ["Touch the wall", "You cant find the wall, you're in a dark room", True], "b": ["Czech pockets", "Your pockets were made in the Czech republic, but that won't help you now.", False], "c": ["Turn on the light", "How can you find the lightswitch, you're in a dark room?", True], "d": ["Weep", "You stand in the dark and weep", True]},
-            4: {"a": ["Go south", "In the darkness, you walk headfirst into the southern wall", False], "b": ["Enter cheat code", "Level Skip", True], "c": ["Talk to NPC", "Side Quest Activated", True], "d": ["Save Game", "The game is beyond saving really", True]},
-            5: {"a": ["Kick Wall", "You broke the 4th wall", False], "b": ["Inventory", "Lightswitch", True], "c": ["Abandon Hope", "You lean on the wall and weep, knocking the lightswitch on as you do", True], "d": ["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do", True]}
-        }
+        self.options = build_story()
+
+    # def __init__(self):
+    #     self.options = {
+    #         1: {"a": ["Why?", "Because it's dark, and it's a room, and you're in it.", True], "b": ["Check Pockets", "You stand in the room with your hands in your pockets.", True], "c": ["Go North", "You proceed in a direction you assume to be North, how can you tell, you're in a dark room.", True], "d": ["Sleep", "You awake to find yourself in a dark room", True]},
+    #         2: {"a": ["This is an option", "You continue your search", True], "b": ["This one will kill you", "I have no choice but to inform you...", False], "c": ["This is also an option", "You continue your search", True], "d": ["This is an option too", "You continue your search", True]},
+    #         3: {"a": ["Touch the wall", "You cant find the wall, you're in a dark room", True], "b": ["Czech pockets", "Your pockets were made in the Czech republic, but that won't help you now.", False], "c": ["Turn on the light", "How can you find the lightswitch, you're in a dark room?", True], "d": ["Weep", "You stand in the dark and weep", True]},
+    #         4: {"a": ["Go south", "In the darkness, you walk headfirst into the southern wall", False], "b": ["Enter cheat code", "Level Skip", True], "c": ["Talk to NPC", "Side Quest Activated", True], "d": ["Save Game", "The game is beyond saving really", True]},
+    #         5: {"a": ["Kick Wall", "You broke the 4th wall", False], "b": ["Inventory", "Lightswitch", True], "c": ["Abandon Hope", "You lean on the wall and weep, knocking the lightswitch on as you do", True], "d": ["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do", True]}
+    #     }
 
 
 main()
