@@ -2,4 +2,4 @@
 ["Abandon Hope", "You push Hope out of your way, she falls backwards straight into the lightswitch.", True]
 ["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do.", True]
 ["Download DLC", "Activated 'See Plus Plus' plugin and found the lightswitch", True]
-["", "". True]
+["", "", True]
