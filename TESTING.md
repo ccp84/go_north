@@ -27,3 +27,9 @@
 
 * Choosing a b c or d as the game path option - the verify choice function checks `if` input matches a, b, c or d. Otherwise an error message is displayed on screen and a prompt to the user to enter a valid option and another chance to input their choice again. 
 ![User path testing](documentation/game_path_choice_test.png)
+
+## Code validation with CI validation app
+
+
+
+* [Back to README](README.md)

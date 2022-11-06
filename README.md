@@ -1,5 +1,7 @@
 # Go North - A Text Based Adventure Game
 
+* [Play deployed game here](https://go-north.herokuapp.com/)
+
 ## Concept
 Users will follow onscreen prompts to select an option to progress to the next stage of their adventure. The correct option will promote them along through the game, the wrong choice could lead them backwards, or worse. 
 
@@ -52,58 +54,25 @@ This function asks for a choice from the available game path choices displayed b
 This function calls on the `verify_response()` function to gain the users next validated pathway choice. It then extracts the game's storyline response from the Pathway object's options dictionary and displays the next part of the story to the user. Using an if statement, the function then gets the `True` or `False` indicator attached to the choice made by the user to decide if `True` the game levels up and continues along the game path or if `False` .....
 ![Death](documentation/death.png)
 
+### build_story() function
+
+This function
+
+## Testing
+
+[Link to testing carried out](TESTING.md)
+
+
+## Deployment
+
 
 ## Credits
 
+* FLowchart https://lucid.app/
 * Isalpha for checking username https://www.w3schools.com/python/ref_string_isalpha.asp#:~:text=The%20isalpha()%20method%20returns,alphabet%20letters%3A%20(space)!
 * Storyline idea and sarcasm - https://www.thejohnrobertson.com/thedarkroom/
 * Block letters https://www.codecademy.com/courses/learn-python-3/projects/python-block-letters
 * File handling method https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-files/
 * Shuffle https://www.w3schools.com/python/ref_random_shuffle.asp
 * Replace https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/exercises/replace
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome ccp84,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+* Fix for json https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python

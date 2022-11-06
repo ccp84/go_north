@@ -11,3 +11,5 @@
 ["Green check pockets", "Yes, your pockets are green check. But that doesnt help you now.", True]
 ["How many programmers does it take to change a lightbulb?", "None, thats a hardware issue.", True]
 ["Check wardrobe", "It's just a wardrobe.", True]
+["42", "That is the correct answer", True]
+["", "", True]
