@@ -10,7 +10,10 @@ Overview of gameplay
 
 ## User Stories
 
-* 
+Users should be able to
+* Understand what to enter at each prompt.
+* Recieve clear feedback for incorrect text entries.
+* Find out how to play the game.
 
 ## Gameplay Logic
 ```
@@ -62,6 +65,10 @@ This function is called when building the Pathway object and contains a randomly
 
 [Link to testing carried out](TESTING.md)
 
+
+## Future Features
+
+Given more time and scope to develop this project. I would like to have added the logic to loop the user backwards instead of only having game over as an option for incorrect choices. I would also have liked to add the ability for users to select the game length. 
 
 ## Deployment
 
