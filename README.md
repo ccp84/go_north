@@ -1,4 +1,4 @@
-# Go North - A Text Based Adventure Game
+# Go North - A Text-Based Adventure Game
 
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
@@ -72,6 +72,12 @@ Given more time and scope to develop this project. I would like to have added th
 
 ## Deployment
 
+## Technologies Used
+* Git - Version control and project flow management
+* [GitHub Issues - For tracking and resolving bug fixes](https://github.com/ccp84/go_north/issues)
+* Code Institute Python Terminal Template
+* [Heroku - Deployment of Python project](https://id.heroku.com/login)
+* Python Class and Object Oriented Code
 
 ## Credits
 
