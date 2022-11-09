@@ -30,6 +30,9 @@
 
 ## Code validation with CI validation app
 
+Both python files pass through the Code Institute PEP8 validator with no errors:
+![run.py screenshot](documentation/runpy_verify.png)
+![story.py screenshot](documentation/storypy_verify.png)
 
 
 * [Back to README](README.md)
