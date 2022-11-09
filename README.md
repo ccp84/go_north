@@ -72,6 +72,16 @@ Given more time and scope to develop this project. I would like to have added th
 
 ## Deployment
 
+The site was deployed to Heroku. The steps to deploy are as follows: 
+  - Fork or Clone the [GitHub repository](https://github.com/ccp84/go_north) 
+  - Create a new [Heroku](https://id.heroku.com/login) app
+  - In the app settings, add Python and NodeJS buildpacks (maintain that order)
+  - In app settings, add a config var of KEY: PORT, VALUE: 800
+  - In deploy, link your GitHub repo
+  - Enable deployment
+
+The live link can be found [here](https://go-north.herokuapp.com/)
+
 ## Technologies Used
 * Git - Version control and project flow management
 * [GitHub Issues - For tracking and resolving bug fixes](https://github.com/ccp84/go_north/issues)
