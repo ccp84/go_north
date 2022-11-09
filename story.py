@@ -31,11 +31,10 @@ def build_story():
     storyline = {}
     while current_level < 4:
         level_options = []
-        i = 1
-        while i <= 3:
-            level_options.append(positives[i + (i * current_level)])
-            i += 1
-        level_options.append(negatives[current_level])
+        level_options.extend([positives.pop(),
+                              positives.pop(),
+                              positives.pop(),
+                              negatives.pop()])
         random.shuffle(level_options)
         """
         ast.literal_eval code used from stack overflow
@@ -63,10 +62,11 @@ def build_story():
             new_line = line.strip('\n')
             winning.append(new_line)
     random.shuffle(winning)
-    ending.extend([winning[0],
-                   winning[1],
-                   negatives[current_level],
-                   negatives[current_level + 1]])
+    ending.extend([winning.pop(),
+                   winning.pop(),
+                   negatives.pop(),
+                   negatives.pop()])
+    random.shuffle(ending)
     storyline[current_level] = {
         "a": ast.literal_eval(ending[0]),
         "b": ast.literal_eval(ending[1]),

@@ -110,7 +110,7 @@ def handle_response(current_game):
     If response is False. Game over. Take user back to start game screen.
     """
     choice = verify_response()
-    current_path = current_game.gamepath.options[current_game.game_level+1]
+    current_path = current_game.gamepath.options[current_game.game_level + 1]
     outcome = current_path[choice]
     print(outcome[1])
     if outcome[2]:
@@ -133,6 +133,7 @@ class Game:
     """
     Builds a new Game
     """
+
     def __init__(self, name):
         self.name = name
         self.game_level = 0
