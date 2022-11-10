@@ -121,15 +121,16 @@ def handle_response(current_game):
         current_game.game_level += 1
         print(f"""
 
-        You have been promoted to a level {current_game.game_level} adventurer {current_game.name}.
-        You must continue on your quest!
+        You have been promoted to a level {current_game.game_level} adventurer.
+        You must continue on your quest {current_game.name}!
 
         """)
     elif (current_game.game_level - 1) >= 0:
         current_game.game_level -= 1
         print(f"""
 
-        Take heed {current_game.name}, your adventurer level is now {current_game.game_level}.
+        Take heed {current_game.name},
+        your adventurer level is now {current_game.game_level}.
         Loosing too many lives will cost you the game.
 
         """)
