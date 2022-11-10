@@ -71,8 +71,12 @@ def start_game(username):
     while new_game.game_level < 5:
         display_option(new_game)
         handle_response(new_game)
-        new_game.game_level += 1
-    print("\n Glory and admiration is yours \n")
+    print(f"""
+
+    You are promoted to a level 5 warrior {username}.
+    Glory and admiration are yours.
+
+    """)
     verify_first_choice(username)
 
 
@@ -94,7 +98,7 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("\nWhich path will you take?\n").lower()
+        option = input("Which path will you take?\n").lower()
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
@@ -114,9 +118,28 @@ def handle_response(current_game):
     outcome = current_path[choice]
     print(outcome[1])
     if outcome[2]:
-        return
+        current_game.game_level += 1
+        print(f"""
+
+        You have been promoted to a level {current_game.game_level} adventurer {current_game.name}.
+        You must continue on your quest!
+
+        """)
+    elif (current_game.game_level - 1) >= 0:
+        current_game.game_level -= 1
+        print(f"""
+
+        Take heed {current_game.name}, your adventurer level is now {current_game.game_level}.
+        Loosing too many lives will cost you the game.
+
+        """)
     else:
-        print("\nYou died. Game over. Better luck next time\n")
+        print(f"""
+
+        Your adventurer level is reduced beyond 0, no lives remain.
+        Better luck next time {current_game.name}.
+
+        """)
         verify_first_choice(current_game.name)
 
 
@@ -140,7 +163,7 @@ class Game:
         self.gamepath = Pathway()
 
     def __repr__(self):
-        return "You awake to find yourself in a dark room..."
+        return "\nYou awake to find yourself in a dark room...\n"
 
 
 class Pathway:
