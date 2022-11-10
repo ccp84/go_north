@@ -29,7 +29,7 @@ def build_story():
     """
     current_level = 1
     storyline = {}
-    while current_level < 4:
+    while current_level < 5:
         level_options = []
         level_options.extend([positives.pop(),
                               positives.pop(),
