@@ -18,6 +18,13 @@ def display_title_screen():
     G   G  O   O   N   N  O   O  R  R     T    H   H
      GGG    OOO    N   N   OOO   R   R    T    H   H
      """)
+    print("""
+
+    A text adventure game.
+    Follow the clues to find the lightswitch.
+    Become a top level adventurer and escape the room.
+
+     """)
 
 
 def verify_username():
