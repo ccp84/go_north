@@ -1,6 +1,6 @@
 ["Inventory", "Contentents of Inventory. Pen, Pocket Fluff, Lightswitch.", True]
 ["Abandon Hope", "You push Hope out of your way, she falls backwards into the lightswitch.", True]
-["Lean on wall and weep", "You lean on the wall and weep, knocking the lightswitch on as you do.", True]
+["Lean on wall and weep", "You lean on the wall and weep, knocking the light on as you do.", True]
 ["Download DLC", "Activated 'See Plus Plus' plugin and found the lightswitch.", True]
 ["Wandering monster", "A monster wanders past and turns on the lightswitch", True]
 ["Divine intervention", "You see the light", True]
