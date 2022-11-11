@@ -31,12 +31,14 @@ def verify_username():
     """
     Take in username and check contents
     """
-    username = input("\nWhat is your name?\n:")
-    if username.isalpha():
-        print(f"Hi {username}")
-    else:
-        print("ERROR name must contain letters only")
-        verify_username()
+    name_check = True
+    while name_check:
+        username = input("\nWhat is your name?\n:")
+        if username.isalpha():
+            print(f"Hi {username}")
+            name_check = False
+        else:
+            print("ERROR name must contain letters only")
     return username
 
 
