@@ -6,3 +6,6 @@
 ["Enter cheatcode", "Level skip entered. You skip through the darkness headfirst into a wall.", False]
 ["Bablefish", "Maybe if this was written in a different language you'd be able to C#er", False]
 ["Go Turbo", "Game unplugged, that didnt work for Ralph either.", False]
+["Chicken on your head", "Cursed", False]
+["Unspeakably awful indescribable horror", "Bad stuff. What did you expect!?", False]
+["Whine at the GM", "Oh no, never try to argue with the GM.", False]
