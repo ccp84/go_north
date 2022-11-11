@@ -75,7 +75,8 @@ def start_game(username):
         handle_response(new_game)
     print(f"""
 
-    You are promoted to a level 5 warrior {username}.
+    Congratulations {username}.
+    You are promoted to a top rank adventurer.
     Glory and admiration are yours.
 
     """)
@@ -120,13 +121,15 @@ def handle_response(current_game):
     outcome = current_path[choice]
     if outcome[2]:
         current_game.game_level += 1
-        print(f"""
+        if current_game.game_level < 5:
+            print(f"""
 
-        {outcome[1]}
-        You have been promoted to a level {current_game.game_level} adventurer.
-        You must continue on your quest {current_game.name}!
+            {outcome[1]}
+            You have been promoted to a
+            level {current_game.game_level} adventurer.
+            You must continue on your quest {current_game.name}!
 
-        """)
+            """)
     elif (current_game.game_level - 1) >= 0:
         current_game.game_level -= 1
         print(f"""
