@@ -55,7 +55,9 @@ def display_instructions(name):
     print("""
     Follow the story.
     Select a, b, c or d at each turn.
-    Find the lightswitch.
+    The right choices will promote your adventurer level.
+    The wrong choice will send you back a level.
+    Become a level 5 adventurer to win the game!
     """)
     verify_first_choice(name)
 
@@ -116,11 +118,11 @@ def handle_response(current_game):
     choice = verify_response()
     current_path = current_game.gamepath.options[current_game.game_level + 1]
     outcome = current_path[choice]
-    print(outcome[1])
     if outcome[2]:
         current_game.game_level += 1
         print(f"""
 
+        {outcome[1]}
         You have been promoted to a level {current_game.game_level} adventurer.
         You must continue on your quest {current_game.name}!
 
@@ -129,6 +131,7 @@ def handle_response(current_game):
         current_game.game_level -= 1
         print(f"""
 
+        {outcome[1]}
         Take heed {current_game.name},
         your adventurer level is now {current_game.game_level}.
         Loosing too many lives will cost you the game.
