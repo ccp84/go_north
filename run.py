@@ -139,6 +139,10 @@ def handle_response(current_game):
             You must continue on your quest {current_game.name}!
 
             """)
+        else:
+            print(f"""
+            {outcome[1]}
+            """)
     elif (current_game.game_level - 1) >= 0:
         current_game.game_level -= 1
         print(f"""
