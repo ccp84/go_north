@@ -3,7 +3,7 @@
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
 ## Concept
-Users will follow onscreen prompts to select an option to progress to the next stage of their adventure. The correct option will promote them along through the game, the wrong choice could lead them backwards, or worse. 
+Users begin as a level 0 adventurer. By selecting from on screen options as they follow the story through the game, they can gain or loose levels on their quest to become a level 5 adventurer! The correct option will promote them along through the game, the wrong choice could lead them backwards, or worse. 
 
 Overview of gameplay
 ![Gameplay Flowchart](documentation/gameplay.png)
