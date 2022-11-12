@@ -83,7 +83,6 @@ def start_game(username):
         display_option(new_game)
         handle_response(new_game)
     print(f"""
-
     Congratulations {username}.
     You are promoted to a top rank adventurer.
     Glory and admiration are yours.
@@ -141,7 +140,7 @@ def handle_response(current_game):
             """)
         else:
             print(f"""
-            {outcome[1]}
+    {outcome[1]}
             """)
     elif (current_game.game_level - 1) >= 0:
         current_game.game_level -= 1
