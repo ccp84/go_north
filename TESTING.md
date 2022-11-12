@@ -25,6 +25,10 @@
 * [Issue appending to dictionary adding apostrophes](https://github.com/ccp84/go_north/issues/5)
 ![Issue 5 screenshot](documentation/issue_5.png)
 
+## Bugs Remaining
+
+* Tests carried out revealed no remaining bugs.
+
 ## Manual Testing
 
 * Username input - an if statement checks that only alpha characters are entered and displays an error message if this check returns false. Tests proved to only accept alpha characters as below.
