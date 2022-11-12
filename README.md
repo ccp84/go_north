@@ -85,6 +85,7 @@ The live link can be found [here](https://go-north.herokuapp.com/)
 ## Technologies Used
 * Git - Version control and project flow management
 * [GitHub Issues - For tracking and resolving bug fixes](https://github.com/ccp84/go_north/issues)
+![GitHub Issues](documentation/issue_1.png)
 * Code Institute Python Terminal Template
 * [Heroku - Deployment of Python project](https://id.heroku.com/login)
 * Python Class and Object Oriented Code
