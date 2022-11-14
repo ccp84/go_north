@@ -4,13 +4,13 @@ import ast
 
 
 def build_story():
-    positives = []
-    negatives = []
     """
     Read in positive/negative text file,
     Create a new list of each line
     Shuffle
     """
+    positives = []
+    negatives = []
     with open("positive.txt") as positive:
         for line in positive:
             new_line = line.strip('\n')
