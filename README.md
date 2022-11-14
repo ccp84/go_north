@@ -71,16 +71,49 @@ This function is called when building the Pathway object and contains a randomly
 Given more time and scope to develop this project, I would have liked to allow users to select the difficuly of the game allowing for shorter / longer game lengths. I would have also liked to work on developing the storyline to give better flow of responses and options, and build in a choice of pathways to take for further replayability. 
 
 ## Deployment
-
-The site was deployed to Heroku. The steps to deploy are as follows: 
-  - Fork or Clone the [GitHub repository](https://github.com/ccp84/go_north) 
-  - Create a new [Heroku](https://id.heroku.com/login) app
-  - In the app settings, add Python and NodeJS buildpacks (maintain that order)
-  - In app settings, add a config var of KEY: PORT, VALUE: 800
-  - In deploy, link your GitHub repo
-  - Enable deployment
-
-The live link can be found [here](https://go-north.herokuapp.com/)
+​
+Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the project to others.
+​
+The live deployed application can be found at [Go North](https://go-north.herokuapp.com/).
+​
+### Local Deployment
+​
+*Gitpod* IDE was used to write the code for this project.
+​
+To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
+- `git clone https://github.com/ccp84/go_north.git`
+​
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+​
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ccp84/go_north)
+​
+### Heroku Deployment
+​
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+​
+Deployment steps are as follows, after account setup:
+​
+- Select *New* in the top-right corner of your Heroku Dashboard, and select *Create new app* from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select *Create App*.
+- From the new app *Settings*, click *Reveal Config Vars*, and set the value of KEY to `PORT`, and the value to `8000` then select *add*.
+- Further down, to support dependencies, select *Add Buildpack*.
+- The order of the buildpacks is important, select `Python` first, then `Node.js` second. (if they are not in this order, you can drag them to rearrange them)
+​
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+​
+You can install this project's requirements (where applicable) using: `pip3 install -r requirements.txt`. If you have your own packages that have been installed, then the requirements file needs updated using: `pip3 freeze --local > requirements.txt`
+​
+The Procfile can be created with the following command: `echo web: node index.js > Procfile`
+​
+For Heroku deployment, follow these steps to connect your GitHub repository to the newly created app:
+​
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a <app_name>` (replace app_name with your app, without the angle-brackets)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type: `git push heroku main`
+​
+The frontend terminal should now be connected and deployed to Heroku.
 
 ## Technologies Used
 * Git - Version control and project flow management
@@ -101,3 +134,4 @@ The live link can be found [here](https://go-north.herokuapp.com/)
 * [How to shuffle from w3schools documentation](https://www.w3schools.com/python/ref_random_shuffle.asp)
 * [String replace method learned in Codecademy tutorial](https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/)
 * [Fix for using ast / json to remove added aspostrophes when appending to a dictionary from StackOverflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python)
+* Mentor, Tim Nelson, for assistance with Heroku deployment instructions.
