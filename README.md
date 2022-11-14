@@ -31,12 +31,22 @@ Call main()
         Build new Game object
         Display Game string representation
         Print initial game option
-        User input response - verify response ( check for a, b, c, d then run Handle response() )
-        Handle response ( Check response type advance - display next set of options and increment game level counter / hold - re display same set of responses calls display opt())
+        User input response - verify response ( check for a, b, c, d, x then run Handle response() )
+        Handle response: 
+            (Check response type:
+            x = exit back to game menu
+            a,b,c,d = enter while loop
+            other = display error and ask for re entry of response
         While game level counter < 5
             User input response - verify response()
             Handle response()
-    End game( Display end of game message and option to re start or quit )
+        If game level counter < 0
+            Game over
+            Return to start of game
+        If game level counter > 5
+            Display winning message
+            Return to start of game
+    End game
 ```
 ## Project Development
 
