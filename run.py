@@ -127,6 +127,7 @@ def display_option(current_game):
     """
     display_level = current_game.game_level + 1
     game_path = current_game.gamepath.options[display_level]
+    print("Which choice will you make?\n")
     print(f'A {game_path["a"][0]}')
     print(f'B {game_path["b"][0]}')
     print(f'C {game_path["c"][0]}')
@@ -139,7 +140,7 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input(":\n").lower()
+        option = input("\n:").lower()
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
@@ -154,7 +155,6 @@ def handle_response(current_game):
     If response True is advance display next set of options
     If response is False. Game over. Take user back to start game screen.
     """
-    clear_terminal()
     choice = verify_response()
     current_path = current_game.gamepath.options[current_game.game_level + 1]
     outcome = current_path[choice]
@@ -166,8 +166,6 @@ def handle_response(current_game):
 {outcome[1]}
 You have been promoted to a level {current_game.game_level} adventurer.
 You must continue on your quest {current_game.name}!
-
-Which path will you take next?
 
             """)
         else:
@@ -181,8 +179,6 @@ Which path will you take next?
 {outcome[1]}
 Take heed, your adventurer level is now {current_game.game_level}.
 Loosing too many lives will cost you the game {current_game.name}.
-
-Which path will you take next?
 
         """)
     else:
