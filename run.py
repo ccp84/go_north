@@ -161,6 +161,7 @@ def handle_response(current_game):
     if outcome[2]:
         current_game.game_level += 1
         if current_game.game_level < 5:
+            clear_terminal()
             print(f"""
 
 {outcome[1]}
@@ -169,6 +170,7 @@ You must continue on your quest {current_game.name}!
 
             """)
         else:
+            clear_terminal()
             print(f"""
 {outcome[1]}
             """)
@@ -182,6 +184,7 @@ Loosing too many lives will cost you the game {current_game.name}.
 
         """)
     else:
+        clear_terminal()
         print(f"""
 
 Your adventurer level is reduced beyond 0, no lives remain.
