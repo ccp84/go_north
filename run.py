@@ -159,10 +159,11 @@ def handle_response(current_game):
     """
     choice = verify_response()
     if choice == "x":
-        verify_first_choice(current_game.name)
+        clear_terminal()
+        main()
     else:
-        current_path = current_game.gamepath.options[current_game.game_level + 1]
-        outcome = current_path[choice]
+        path = current_game.gamepath.options[current_game.game_level + 1]
+        outcome = path[choice]
         if outcome[2]:
             current_game.game_level += 1
             if current_game.game_level < 5:
