@@ -154,6 +154,7 @@ def handle_response(current_game):
     If response True is advance display next set of options
     If response is False. Game over. Take user back to start game screen.
     """
+    clear_terminal()
     choice = verify_response()
     current_path = current_game.gamepath.options[current_game.game_level + 1]
     outcome = current_path[choice]
@@ -163,30 +164,30 @@ def handle_response(current_game):
             print(f"""
 
 {outcome[1]}
-You have been promoted to a
-level {current_game.game_level} adventurer.
+You have been promoted to a level {current_game.game_level} adventurer.
 You must continue on your quest {current_game.name}!
+
+Which path will you take next?
 
             """)
         else:
             print(f"""
-    {outcome[1]}
+{outcome[1]}
             """)
     elif (current_game.game_level - 1) >= 0:
         current_game.game_level -= 1
         print(f"""
 
-        {outcome[1]}
-        Take heed {current_game.name},
-        your adventurer level is now {current_game.game_level}.
-        Loosing too many lives will cost you the game.
+{outcome[1]}
+Take heed, your adventurer level is now {current_game.game_level}.
+Loosing too many lives will cost you the game {current_game.name}.
 
         """)
     else:
         print(f"""
 
-        Your adventurer level is reduced beyond 0, no lives remain.
-        Better luck next time {current_game.name}.
+Your adventurer level is reduced beyond 0, no lives remain.
+Better luck next time {current_game.name}.
 
         """)
         verify_first_choice(current_game.name)
