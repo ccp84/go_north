@@ -3,6 +3,7 @@ Go North
 A text based adventure game for Code Institute PP3
 """
 from story import build_story
+import os
 
 
 def display_title_screen():
@@ -75,12 +76,16 @@ def display_instructions(name):
     """
     Prints game instructions to screen
     """
+    clear_terminal()
     print("""
-    Follow the story.
-    Select a, b, c or d at each turn.
-    The right choices will promote your adventurer level.
-    The wrong choice will send you back a level.
-    Become a level 5 adventurer to win the game!
+    Your challenge is to escape the room.
+    You start as a level 0 adventurer. Become a level 5
+    adventurer to escape!
+    Choose wether you think the option displayed
+    next to a, b, c and d is either 'Loot' or a 'Cheat Code' which 
+    will send you up a level. Or a 'Monster' or a 'Curse',
+    these will send you back a level.
+    If you go below level 0 - all lives are lost.
     """)
     verify_first_choice(name)
 
