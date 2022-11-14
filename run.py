@@ -20,11 +20,25 @@ def display_title_screen():
      """)
     print("""
 
-    A text adventure game.
-    Follow the clues to find the lightswitch.
-    Become a top level adventurer and escape the room.
+    Welcome to the room Adventurer!
+    Your challenge, should you accept, is to
+    advance to a level 5 adventurer to escape.
+    Choose your options carefully.
+    Loot will advance your adventurer level.
+    Monsters and curses will send you backwards...
+    ... or worse.
 
      """)
+
+
+def clear_terminal():
+    """
+    Clear terminal function
+    Code used from answer found on stack overflow here:
+    https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def verify_username():
