@@ -162,10 +162,10 @@ def handle_response(current_game):
         if current_game.game_level < 5:
             print(f"""
 
-            {outcome[1]}
-            You have been promoted to a
-            level {current_game.game_level} adventurer.
-            You must continue on your quest {current_game.name}!
+{outcome[1]}
+You have been promoted to a
+level {current_game.game_level} adventurer.
+You must continue on your quest {current_game.name}!
 
             """)
         else:

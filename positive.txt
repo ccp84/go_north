@@ -1,4 +1,4 @@
-["Why?", "Cheat code acticated \n        Because it's dark, and it's a room, and you're in it.", True]
+["Why?", "Cheat code acticated \nBecause it's dark, and it's a room, and you're in it.", True]
 ["Red check pockets", "You stand in the room with your hands in your pockets.", True]
 ["Go North", "You proceed in a direction you assume to be North.", True]
 ["Sleep", "You awake to find yourself in a dark room.", True]
