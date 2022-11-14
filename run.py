@@ -23,9 +23,9 @@ def display_title_screen():
 
     Welcome to the room Adventurer!
     Your challenge, should you accept, is to
-    advance to a level 5 adventurer to escape.
+    advance to a level 5 adventurer and escape.
     Choose your options carefully.
-    Loot will advance your adventurer level.
+    Loot or cheat codes will advance your adventurer level.
     Monsters and curses will send you backwards...
     ... or worse.
 
@@ -81,10 +81,10 @@ def display_instructions(name):
     Your challenge is to escape the room.
     You start as a level 0 adventurer. Become a level 5
     adventurer to escape!
-    Choose wether you think the option displayed
-    next to a, b, c and d is either 'Loot' or a 'Cheat Code' which
-    will send you up a level. Or a 'Monster' or a 'Curse',
-    these will send you back a level.
+    There are 4 options each time you step forwards A, B, C or D.
+    You should choose an option you think will help you progress.
+    'Loot' and 'Cheat Codes' will move you up a level, 'Monsters and
+    'Curses' will send you back a level.
     If you go below level 0 - all lives are lost.
     """)
     verify_first_choice(name)
@@ -116,10 +116,10 @@ def display_option(current_game):
     """
     display_level = current_game.game_level + 1
     game_path = current_game.gamepath.options[display_level]
-    print(f'a {game_path["a"][0]}')
-    print(f'b {game_path["b"][0]}')
-    print(f'c {game_path["c"][0]}')
-    print(f'd {game_path["d"][0]}')
+    print(f'A {game_path["a"][0]}')
+    print(f'B {game_path["b"][0]}')
+    print(f'C {game_path["c"][0]}')
+    print(f'D {game_path["d"][0]}')
 
 
 def verify_response():
@@ -128,7 +128,7 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("Which path will you take?\n").lower()
+        option = input("Which step will you take?\n").lower()
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
