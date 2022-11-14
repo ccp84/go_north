@@ -132,6 +132,7 @@ def display_option(current_game):
     print(f'B {game_path["b"][0]}')
     print(f'C {game_path["c"][0]}')
     print(f'D {game_path["d"][0]}')
+    print('\nX Exit to menu')
 
 
 def verify_response():
@@ -141,10 +142,11 @@ def verify_response():
     verified_option = False
     while not verified_option:
         option = input("\n:").lower()
-        if option == "a" or option == "b" or option == "c" or option == "d":
+        if (option == "a" or option == "b" or option == "c" or option == "d"
+                or option == "x"):
             verified_option = True
         else:
-            print(f"\nError {option} is not valid. Please enter a b c or d\n")
+            print(f"\nError {option} not valid. Enter A, B, C, D or X only\n")
     return option
 
 
@@ -156,42 +158,46 @@ def handle_response(current_game):
     If response is False. Game over. Take user back to start game screen.
     """
     choice = verify_response()
-    current_path = current_game.gamepath.options[current_game.game_level + 1]
-    outcome = current_path[choice]
-    if outcome[2]:
-        current_game.game_level += 1
-        if current_game.game_level < 5:
-            clear_terminal()
-            print(f"""
+    if choice == "x":
+        verify_first_choice(current_game.name)
+    else:
+        current_path = current_game.gamepath.options[current_game.game_level + 1]
+        outcome = current_path[choice]
+        if outcome[2]:
+            current_game.game_level += 1
+            if current_game.game_level < 5:
+                clear_terminal()
+                print(f"""
 
 {outcome[1]}
 You have been promoted to a level {current_game.game_level} adventurer.
 You must continue on your quest {current_game.name}!
 
-            """)
-        else:
-            clear_terminal()
-            print(f"""
+                """)
+            else:
+                clear_terminal()
+                print(f"""
 {outcome[1]}
             """)
-    elif (current_game.game_level - 1) >= 0:
-        current_game.game_level -= 1
-        print(f"""
+        elif (current_game.game_level - 1) >= 0:
+            current_game.game_level -= 1
+            clear_terminal()
+            print(f"""
 
 {outcome[1]}
 Take heed, your adventurer level is now {current_game.game_level}.
 Loosing too many lives will cost you the game {current_game.name}.
 
         """)
-    else:
-        clear_terminal()
-        print(f"""
+        else:
+            clear_terminal()
+            print(f"""
 
 Your adventurer level is reduced beyond 0, no lives remain.
 Better luck next time {current_game.name}.
 
-        """)
-        verify_first_choice(current_game.name)
+            """)
+            verify_first_choice(current_game.name)
 
 
 def main():
