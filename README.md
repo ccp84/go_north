@@ -134,4 +134,5 @@ The frontend terminal should now be connected and deployed to Heroku.
 * [How to shuffle from w3schools documentation](https://www.w3schools.com/python/ref_random_shuffle.asp)
 * [String replace method learned in Codecademy tutorial](https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/)
 * [Fix for using ast / json to remove added aspostrophes when appending to a dictionary from StackOverflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python)
+* [Clear terminal function from stack overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
 * Mentor, Tim Nelson, for assistance with Heroku deployment instructions.
