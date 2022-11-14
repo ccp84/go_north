@@ -82,7 +82,7 @@ def display_instructions(name):
     You start as a level 0 adventurer. Become a level 5
     adventurer to escape!
     Choose wether you think the option displayed
-    next to a, b, c and d is either 'Loot' or a 'Cheat Code' which 
+    next to a, b, c and d is either 'Loot' or a 'Cheat Code' which
     will send you up a level. Or a 'Monster' or a 'Curse',
     these will send you back a level.
     If you go below level 0 - all lives are lost.

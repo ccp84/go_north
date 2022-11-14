@@ -3,7 +3,10 @@
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
 ## Concept
-Users begin as a level 0 adventurer. By selecting from on screen options as they follow the story through the game, they can gain or loose levels on their quest to become a level 5 adventurer! The correct option will promote them along through the game, the wrong choice could lead them backwards, or worse. 
+Go North is aimed at Munckin and D&D players who are fans of the [John Robertsons live action text based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
+Users begin as a level 0 adventurer. By selecting from on screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
+'Loot' and 'Cheat Codes will gain levels. 'Monsters' or 'Curses' will loose levels.
+Loose too many levels and it's game over.
 
 Overview of gameplay
 ![Gameplay Flowchart](documentation/gameplay.png)
