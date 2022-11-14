@@ -34,7 +34,7 @@ def display_title_screen():
 
 def clear_terminal():
     """
-    Clear terminal function
+    Function to clear previous terminal entries from the screen
     Code used from answer found on stack overflow here:
     https://stackoverflow.com/questions/2084508/clear-terminal-in-python
 
@@ -46,11 +46,18 @@ def verify_username():
     """
     Take in username and check contents
     """
+    # Set check indicator to true while name is being verified
     name_check = True
     while name_check:
         username = input("\nWhat is your name?\n:")
         if username.isalpha():
             print(f"Hi {username}")
+            """
+            Once name is verified as being valid,
+            Set check indicator to false, this will
+            break the loop and return the username
+            allowing game flow to continue.
+            """
             name_check = False
         else:
             print("ERROR name must contain letters only")
@@ -68,6 +75,7 @@ def verify_first_choice(name):
     elif choice == '2':
         display_instructions(username)
     else:
+        # Handle invalid input if not 1 or 2
         print(f"\nERROR {choice} is an invalid choice. Please enter 1 or 2\n")
         verify_first_choice(username)
 
@@ -86,6 +94,8 @@ def display_instructions(name):
     'Loot' and 'Cheat Codes' will move you up a level, 'Monsters and
     'Curses' will send you back a level.
     If you go below level 0 - all lives are lost.
+    Disputes can be settled by loudly arguing,
+    the game developer has the final word.
     """)
     verify_first_choice(name)
 
@@ -94,6 +104,7 @@ def start_game(username):
     """
     Builds game object and game path
     """
+    clear_terminal()
     print("\n New game building... \n")
     new_game = Game(username)
     print(new_game)
