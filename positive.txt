@@ -17,3 +17,4 @@
 ["Pointy hat of power", "Loot found \nDoesn't do anything but it looks cool.", True]
 ["Hoard", "Loot found \nQuick hoard it all.", True]
 ["Doppleganger", "Cheat code activated \nSummons your exact duplicate to double your strength.", True]
+["Tuba of charm", "Cheat code activated \nCharm your way out of any fight.", True]
