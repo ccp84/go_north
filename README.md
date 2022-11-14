@@ -17,6 +17,8 @@ Users should be able to
 * Understand what to enter at each prompt.
 * Recieve clear feedback for incorrect text entries.
 * Find out how to play the game.
+* Exit back to the start point at any time. 
+
 
 ## Gameplay Logic
 ```
