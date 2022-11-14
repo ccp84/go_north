@@ -139,7 +139,7 @@ def verify_response():
     """
     verified_option = False
     while not verified_option:
-        option = input("Which step will you take?\n").lower()
+        option = input(":\n").lower()
         if option == "a" or option == "b" or option == "c" or option == "d":
             verified_option = True
         else:
@@ -181,6 +181,8 @@ Which path will you take next?
 {outcome[1]}
 Take heed, your adventurer level is now {current_game.game_level}.
 Loosing too many lives will cost you the game {current_game.name}.
+
+Which path will you take next?
 
         """)
     else:
