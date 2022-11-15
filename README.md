@@ -118,7 +118,15 @@ The `gamepath` is an object of the `Pathway` class which builds itself from `sto
 
 ### verify_response() function:
 
-This function asks for a choice from the available game path choices displayed by the `display_current_option()` function and then checks that the user response is valid. If the response is invalid, an error message is displayed on screen with a prompt of the 4 correct options to choose from and cycles back to the start of the input and checking sequence again. Once a valid option has been verified, this is returned back to the main game flow and stored to be used by other functions to continue game play.
+This function asks for a choice from the available game path choices displayed by the `display_current_option()` function and then checks that the user response is valid. 
+
+It first sets a check variable to `False` to indicate that verification is not yet complete and holds a `while` loop whilst waiting for checking to be completed. Input from the user is converted using `lower()` so that both 'A' and 'a' etc. are accepted as responses and verified as acceptable by the `if` statement. 
+
+If the user input is checked as acceptable, the checking variable is set to `True` and the `while` loop is broken. The verified input is returned from the function to the game to be used to continue gameplay. 
+
+However if the user input does not pass the initial `if` statement an `else` statement displays an error message and the user is held in the `while` loop to try again.
+
+![Response error message](documentation/invalid_response.png)
 
 ### handle_response() function:
 
