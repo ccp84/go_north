@@ -230,7 +230,9 @@ The string representation for this class prints out the starting line to the sto
 
 ### Pathway Class
 
+The Pathway class has only one attribute and one function which is to build and contain the story path for the current game. 
 
+When a new `Pathway` object is built, it's options attribute calls the `build_story()` function from `story.py` so that a fresh and randomised story path is generated for each different game. 
 
 ## Testing
 
