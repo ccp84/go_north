@@ -5,7 +5,7 @@
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
 ## Concept
-Go North is aimed at Munchkin and D&D players who are fans of [John Robertsons live-action text-based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
+Go North is aimed at Munchkin and D&D players who are fans of [John Robertson's live-action text-based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
 Users begin as a level 0 adventurer. By selecting from on-screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
 'Loot' and 'Cheat Codes' will gain levels. 'Monsters' or 'Curses' will lose levels.
 Lose too many levels and it's game over.
@@ -222,8 +222,14 @@ Finally, the function returns a fully built randomised storyline back to the `op
 
 ### Game Class
 
+The `Game` class describes and contains the current game being played. It's attributes of `name`, `game_level` and `game_path` are all individual to each game session initiated and are the key variables needed to make each play through unique. 
+
+`game_path` is an unusual attribute as it is itself also an object built from the `Pathway` class. 
+
+The string representation for this class prints out the starting line to the story when a new `Game` object is called 'You awake to find yourself in a dark room...'
 
 ### Pathway Class
+
 
 
 ## Testing
@@ -294,12 +300,12 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 * [Flowchart from Lucidchart](https://lucid.app/)
 * [Isalpha for checking username from w3schools](https://www.w3schools.com/python/ref_string_isalpha.asp#:~:text=The%20isalpha()%20method%20returns,alphabet%20letters%3A%20(space)!)
-* [Storyline and creative ideas based on John Robertsons live interactive show](https://www.thejohnrobertson.com/thedarkroom/)
+* [Storyline and creative ideas based on John Robertson's live interactive show](https://www.thejohnrobertson.com/thedarkroom/)
 * [Further storyline ideas from Steve Jackson's Munchkin](http://www.sjgames.com/)
 * [Block letters formation from Codecademy](https://www.codecademy.com/courses/learn-python-3/projects/python-block-letters)
 * [File handling method from Codecademy tutorial](https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-files/)
 * [How to shuffle from w3schools documentation](https://www.w3schools.com/python/ref_random_shuffle.asp)
 * [String replace method learned in Codecademy tutorial](https://www.codecademy.com/courses/learn-python-3/lessons/string-methods/)
-* [Fix for using ast / json to remove added aspostrophes when appending to a dictionary from StackOverflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python)
-* [Clear terminal function from stack overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+* [Fix for using ast / json to remove added aspostrophes when appending to a dictionary from Stack Overflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python)
+* [Clear terminal function from Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
 * Mentor, Tim Nelson, for assistance with Heroku deployment instructions.
