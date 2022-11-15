@@ -5,10 +5,10 @@
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
 ## Concept
-Go North is aimed at Munckin and D&D players who are fans of [John Robertsons live action text based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
-Users begin as a level 0 adventurer. By selecting from on screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
-'Loot' and 'Cheat Codes will gain levels. 'Monsters' or 'Curses' will loose levels.
-Loose too many levels and it's game over.
+Go North is aimed at Munchkin and D&D players who are fans of [John Robertsons live-action text-based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
+Users begin as a level 0 adventurer. By selecting from on-screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
+'Loot' and 'Cheat Codes will gain levels. 'Monsters' or 'Curses' will lose levels.
+Lose too many levels and it's game over.
 
 Overview of gameplay
 
@@ -39,7 +39,7 @@ Call main()
             (Check response type:
             x = exit back to game menu
             a,b,c,d = enter while loop
-            other = display error and ask for re entry of response
+            other = display error and ask for re-entry of response
         While game level counter < 5
             User input response - verify response()
             Handle response()
@@ -55,7 +55,7 @@ Call main()
 
 ### display_title_screen() function:
 
-This function uses a multi line string to print the title art to the screen at the start of the game, and then displays a welcome message introducing the game. 
+This function uses a multi-line string to print the title art to the screen at the start of the game and then displays a welcome message introducing the game. 
 
 ![Title screen](documentation/title_screen.png)
 
@@ -67,7 +67,7 @@ The code for this function was researched from [Stack Overflow](https://stackove
 
 This function gives the user a keyboard input and saves to the `username` variable. A check variable is initialised to `True` while checking is taking place inside a while loop. 
 
-The test is run to see if the input stored to the `username` variable consists of all alpha characters, using `isalpha`. If this test proves `True`a print statement welcomes the user to the game. At this point the check variable is also set to `False` to indicate that checking is no longer taking place and the while loop can be broken. The loop ends and the verified variable `username` is returned by the function.
+The test is run to see if the input stored to the `username` variable consists of all alpha characters, using `isalpha`. If this test proves `True`a print statement welcomes the user to the game. At this point, the check variable is also set to `False` to indicate that checking is no longer taking place and the while loop can be broken. The loop ends and the verified variable `username` is returned by the function.
 
 ![Welcome user](documentation/username_welcome.png)
 
@@ -93,13 +93,13 @@ An `else` then handles any incorrect entries and loops the user back, displaying
 
 ### display_instructions() function:
 
-This function first makes use of the `clear_terminal()` function to clear the screen. It prints out the game instructions using a multi line string, and then calls `verify_first_choice()` to loop the user back to their start of game choices once again.
+This function first makes use of the `clear_terminal()` function to clear the screen. It prints out the game instructions using a multi-line string and then calls `verify_first_choice()` to loop the user back to their start of game choices once again.
 
 ![Display instructions](documentation/display_instructions.png)
 
 ### start_game() function:
 
-The `start_game()` function is responsible for the main running of the game. It firstly uses the `clear_terminal()` function to clear the game window ensuring the new game starts at the top of the screen. It then builds a new game using the `Game` class storing this as the object `new_game`. Within this object the journey the user is taken on is stored in an object built from the `Pathway` class. 
+The `start_game()` function is responsible for the main running of the game. It first uses the `clear_terminal()` function to clear the game window ensuring the new game starts at the top of the screen. It then builds a new game using the `Game` class storing this as the object `new_game`. Within this object, the journey the user is taken on is stored in an object built from the `Pathway` class. 
 
 A `while` loop is initialised, checking against `new_game.game_level` which will hold the user in the current game. During this time they are guided through the pathway with `display_option()` showing them each set of 4 options to choose from, and `handle_response()` either increasing or decreasing their `game_level` based on the option chosen.
 
@@ -109,7 +109,7 @@ When `game_level > 5` and the user becomes a Level 5 Adventurer the `while` loop
 
 ### display_option() function:
 
-This function takes in the `current_game` object as an argument and uses the `gamepath` attribute of that object to determine the set of options that should be displayed for the users current level.
+This function takes in the `current_game` object as an argument and uses the `gamepath` attribute of that object to determine the set of options that should be displayed for the user's current level.
 The `gamepath` is an object of the `Pathway` class which builds itself from `story.py`.
 
 `display_level` is set to `game_level + 1` to account for the initial level starting at 0 and the timing of calculations meaning an index of -1 being passed to the options list just before 'death'. The `display_level` is used as an index to retrieve the list of options linked to the current level of play from `gamepath`. 
@@ -124,13 +124,13 @@ It first sets a check variable to `False` to indicate that verification is not y
 
 If the user input is checked as acceptable, the checking variable is set to `True` and the `while` loop is broken. The verified input is returned from the function to the game to be used to continue gameplay. 
 
-However if the user input does not pass the initial `if` statement an `else` statement displays an error message and the user is held in the `while` loop to try again.
+However, if the user input does not pass the initial `if` statement an `else` statement displays an error message and the user is held in the `while` loop to try again.
 
 ![Response error message](documentation/invalid_response.png)
 
 ### handle_response() function:
 
-This function first calls `verify_response()` to get a path choice from the user. If the option to quit the game has been selected, the screen is cleared and the game resets ready for another user to play by calling `main()`. However if one of the paths has been chosen then the game continues and a number of checks happen to increase or decrease the users game level. 
+This function first calls `verify_response()` to get a path choice from the user. If the option to quit the game has been selected, the screen is cleared and the game resets ready for another user to play by calling `main()`. However, if one of the paths has been chosen then the game continues and a number of checks happen to increase or decrease the user's game level. 
 
 First of all the relevant path is found by returning the list associated with `game_level + 1`, this path is a dictionary of all 4 choices the user could have picked from at this level of the game. The `outcome` is set to the key associated with the choice that the user made. 
 
@@ -142,13 +142,13 @@ If `outcome[2]` is `True` it means the user selected 'Loot' or a 'Cheat Code', l
 
 ![Level decrease](documentation/decrease.png)
 
-The final `else` statement means none of the above conditions were met, so the level cannot be increased and no lives remain. Unfortunatly that means game over this time. The relevant message is displayed on screen and the user is given the option to start a new game:
+The final `else` statement means none of the above conditions were met, so the level cannot be increased and no lives remain. Unfortunately, that means game over this time. The relevant message is displayed on screen and the user is given the option to start a new game:
 
 ![Death](documentation/no_lives.png)
 
+### main() function
 
-
-
+Main is the first function called when the program is run and initiates gameplay. It first calls `display_title_screen()` to welcome users to the game. Next, `verify_username()` is called to set the player's name for the game and lastly `verify_first_choice()` begins the game. 
 
 ### build_story() function
 
