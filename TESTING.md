@@ -2,12 +2,12 @@
 
 ## User Stories
 
-|    | Outcome | Proof |
+| Test  | Outcome | Proof |
 |----|--------|--------|
 |Understand what to enter at each prompt.| Every time the user is asked to enter text, the acceptable enteries are explained to them. | ![User input example](documentation/user_choice.png)|
 |Recieve clear feedback for incorrect text entries.|Invalid entries are highlighted as incorrect with the correct choices repeated and the user prompted to select again.|![Invalid entry example](documentation/invalid_choice.png)|
 |Find out how to play the game.| The user can select to display the rules at the start of each game.|![Rules](documentation/rules.png)|
-Exit back to the start point at any time. | The use is given the option to quit the game during each selection point of the game. | ![Exit screenshot](documentation/exit.png)
+Exit back to the start point at any time. | The user is given the option to quit the game during each selection point of the game. | ![Exit screenshot](documentation/exit.png)
 
 ## Bug Fixes
 
