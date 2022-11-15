@@ -44,7 +44,10 @@ def clear_terminal():
 
 def verify_username():
     """
-    Take in username and check contents
+    Takes in username
+    Verifies input is a valid username,
+    or returns an error and loops the user back to the input.
+    Returns username once valid entry has been gained.
     """
     # Set check indicator to true while name is being verified
     name_check = True
