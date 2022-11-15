@@ -41,6 +41,8 @@ Lose too many levels and it's game over.
 
 ![Gameplay Flowchart](documentation/gameplay.png)
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ## User Stories
 
 Users should be able to
@@ -49,6 +51,7 @@ Users should be able to
 * Find out how to play the game.
 * Exit back to the start point at any time. 
 
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ## Gameplay Logic
 ```
@@ -78,6 +81,9 @@ Call main()
             Return to start of game
     End game
 ```
+
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ## Project Development
 
 ### display_title_screen() function:
@@ -86,9 +92,13 @@ This function uses a multi-line string to print the title art to the screen at t
 
 ![Title screen](documentation/title_screen.png)
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### clear_terminal() function:
 
 The code for this function was researched from [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and when called, clears all previous text from the mock terminal placing the most recent output at the top of a clean window. This keeps the game flow fresh and easy to read for the user. 
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### verify_username() function:
 
@@ -101,6 +111,8 @@ The test is run to see if the input stored to the `username` variable consists o
 `else` an error message is shown to the user that the input they have given is invalid and they should enter only letters for their name.
 
 ![Error user](documentation/username_error.png)
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### verify_first_choice() function:
 
@@ -120,11 +132,15 @@ An `else` then handles any incorrect entries and loops the user back, displaying
 
 ![First choice error](documentation/first_choice_error.png)
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### display_instructions() function:
 
 This function first makes use of the `clear_terminal()` function to clear the screen. It prints out the game instructions using a multi-line string and then calls `verify_first_choice()` to loop the user back to their start of game choices once again.
 
 ![Display instructions](documentation/display_instructions.png)
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### start_game() function:
 
@@ -136,6 +152,8 @@ When `game_level > 5` and the user becomes a Level 5 Adventurer the `while` loop
 
 ![Level 5 message](documentation/level_5.png)
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### display_option() function:
 
 This function takes in the `current_game` object as an argument and uses the `gamepath` attribute of that object to determine the set of options that should be displayed for the user's current level.
@@ -144,6 +162,8 @@ The `gamepath` is an object of the `Pathway` class which builds itself from `sto
 `display_level` is set to `game_level + 1` to account for the initial level starting at 0 and the timing of calculations meaning an index of -1 being passed to the options list just before 'death'. The `display_level` is used as an index to retrieve the list of options linked to the current level of play from `gamepath`. 
 
 ![Display options](documentation/options.png)
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### verify_response() function:
 
@@ -156,6 +176,8 @@ If the user input is checked as acceptable, the checking variable is set to `Tru
 However, if the user input does not pass the initial `if` statement an `else` statement displays an error message and the user is held in the `while` loop to try again.
 
 ![Response error message](documentation/invalid_response.png)
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### handle_response() function:
 
@@ -175,9 +197,13 @@ The final `else` statement means none of the above conditions were met, so the l
 
 ![Death](documentation/no_lives.png)
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### main() function
 
 Main is the first function called when the program is run and initiates gameplay. It first calls `display_title_screen()` to welcome users to the game. Next, `verify_username()` is called to set the player's name for the game and lastly `verify_first_choice()` begins the game. 
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ### build_story() function
 
@@ -249,6 +275,8 @@ storyline[current_level] = {
 
 Finally, the function returns a fully built randomised storyline back to the `options` attribute of the `Pathway` object. 
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### Game Class
 
 The `Game` class describes and contains the current game being played. It's attributes of `name`, `game_level` and `game_path` are all individual to each game session initiated and are the key variables needed to make each play through unique. 
@@ -257,11 +285,15 @@ The `Game` class describes and contains the current game being played. It's attr
 
 The string representation for this class prints out the starting line to the story when a new `Game` object is called 'You awake to find yourself in a dark room...'
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ### Pathway Class
 
 The Pathway class has only one attribute and one function which is to build and contain the story path for the current game. 
 
 When a new `Pathway` object is built, it's options attribute calls the `build_story()` function from `story.py` so that a fresh and randomised story path is generated for each different game. 
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ## Testing
 
@@ -273,6 +305,8 @@ When a new `Pathway` object is built, it's options attribute calls the `build_st
 Given more time and scope to develop this project, 
 * I would have liked to allow users to select the difficuly of the game allowing for shorter / longer game lengths. 
 * I would have liked to work on developing the storyline to give better flow of responses and options, and build in a choice of pathways to take for further replayability. 
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ## Deployment
 ​
@@ -319,6 +353,8 @@ For Heroku deployment, follow these steps to connect your GitHub repository to t
 ​
 The frontend terminal should now be connected and deployed to Heroku.
 
+[Back to top](#go-north---a-text-based-adventure-game)
+
 ## Technologies Used
 * Git - Version control and project flow management
 * [GitHub Issues - For tracking and resolving bug fixes](https://github.com/ccp84/go_north/issues)
@@ -326,6 +362,8 @@ The frontend terminal should now be connected and deployed to Heroku.
 * Code Institute Python Terminal Template
 * [Heroku - Deployment of Python project](https://id.heroku.com/login)
 * Python Class and Object Oriented Code
+
+[Back to top](#go-north---a-text-based-adventure-game)
 
 ## Credits
 
@@ -340,3 +378,5 @@ The frontend terminal should now be connected and deployed to Heroku.
 * [Fix for using ast / json to remove added aspostrophes when appending to a dictionary from Stack Overflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python)
 * [Clear terminal function from Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
 * Mentor, Tim Nelson, for assistance with Heroku deployment instructions.
+
+[Back to top](#go-north---a-text-based-adventure-game)
