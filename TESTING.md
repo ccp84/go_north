@@ -9,7 +9,7 @@
 |Find out how to play the game.| The user can select to display the rules at the start of each game.|![Rules](documentation/rules.png)|
 Exit back to the start point at any time. | The user is given the option to quit the game during each selection point of the game. | ![Exit screenshot](documentation/exit.png)
 
-## Bug Fixes
+## Bugs encountered and fixed during production
 
 * [verify_first_choice() if statement](https://github.com/ccp84/go_north/issues/1)
 ![Issue 1 screenshot](documentation/issue_1.png)
@@ -28,18 +28,16 @@ Exit back to the start point at any time. | The user is given the option to quit
 
 ## Bugs Remaining
 
-* Tests carried out revealed no remaining bugs.
+* Tests carried out revealed no remaining bugs to the best of my knowledge.
 
 ## Manual Testing
 
-* Username input - an if statement checks that only alpha characters are entered and displays an error message if this check returns false. Tests proved to only accept alpha characters as below.
-![Username verification testing](documentation/player_name_testing.png)
+| Test | Expected Outcome | Outcome | Proof |
+| ---  | -----------------| ------- | ----- |
+|Username input| Only alpha characters accepted. | Tried entering : A number, a character, a space, just hitting enter - all returned an error message informing me this was an invalid entry and that the username must contain letters only. | ![Username verification testing](documentation/player_name_testing.png) |
+| Choosing between 'Start Game' and 'How to Play' | Only '1' or '2' is accepted | Tried entering : 5, a letter, a space, a character, and a blank entry. These all returned an error message stating to enter 1 or 2. Entering 2 displayed a test string in place of the full game rules, entering 1 started the game flow. | ![Initial choice testing](documentation/initial_choice_testing.png) |
+| Choosing a b c or d as the game path option | Only A, a, B, b, C, c, D, d, X, or x should be accepted. | Tests showed that entering e, /, space, blank, or 5 returned an error message that this was an invalid entry and to select from the given options. | ![User path testing](documentation/game_path_choice_test.png) |
 
-* Choosing between 'Start Game' and 'How to Play' - an input box takes the users choice for which action to perform and then checks the response. An if/elif/else statement handles the response. If an invalid option is entered, an error message is displayed and the user is prompted to try again. 
-![Initial choice testing](documentation/initial_choice_testing.png)
-
-* Choosing a b c or d as the game path option - the verify choice function checks `if` input matches a, b, c or d once converted to lowercase to account for entries of A, B, C or D. Otherwise an error message is displayed on screen and a prompt to the user to enter a valid option and another chance to input their choice again. 
-![User path testing](documentation/game_path_choice_test.png)
 
 ## Code validation with CI validation app
 
