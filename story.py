@@ -5,8 +5,9 @@ import ast
 
 def build_story():
     """
-    Read in positive/negative text file,
+    Read in positive/negative/winning text files
     Create a new list of each line
+    Add lines to dictionary
     Shuffle
     """
     positives = []
