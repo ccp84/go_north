@@ -66,8 +66,11 @@ The code for this function was researched from [Stack Overflow](https://stackove
 This function gives the user a keyboard input and saves to the `username` variable. A check variable is initialised to `True` while checking is taking place inside a while loop. 
 
 The test is run to see if the input stored to the `username` variable consists of all alpha characters, using `isalpha`. If this test proves `True`a print statement welcomes the user to the game. At this point the check variable is also set to `False` to indicate that checking is no longer taking place and the while loop can be broken. The loop ends and the verified variable `username` is returned by the function.
+
 ![Welcome user](documentation/username_welcome.png)
+
 `else` an error message is shown to the user that the input they have given is invalid and they should enter only letters for their name.
+
 ![Error user](documentation/username_error.png)
 
 ### verify_first_choice() function:
