@@ -146,15 +146,19 @@ def display_option(current_game):
 
 def verify_response():
     """
-    Verify user response is a b c or d
+    Verify user response is a b c d or x
     """
+    # Set check variable
     verified_option = False
     while not verified_option:
+        # Accept upper or lower case by converting before verification
         option = input("\n:").lower()
         if (option == "a" or option == "b" or option == "c" or option == "d"
                 or option == "x"):
+            # Confirm verified input and break the loop
             verified_option = True
         else:
+            # Display error and loop user back to input again
             print(f"\nError {option} not valid. Enter A, B, C, D or X only\n")
     return option
 
