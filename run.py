@@ -72,14 +72,16 @@ def verify_first_choice(name):
     Check user selects 1 or 2 and then respond with action
     """
     username = name
-    choice = input("\n Start Game - 1   How to play - 2\n:")
+    choice = input("\n Start Game - 1   How to play - 2   Exit - 3\n:")
     if choice == '1':
         start_game(username)
     elif choice == '2':
         display_instructions(username)
+    elif choice == '3':
+        main()
     else:
-        # Handle invalid input if not 1 or 2
-        print(f"\nERROR {choice} is an invalid choice. Please enter 1 or 2\n")
+        # Handle invalid input if not 1, 2 or 3
+        print(f"\nERROR {choice} is an invalid choice. Enter 1, 2 or 3\n")
         verify_first_choice(username)
 
 
