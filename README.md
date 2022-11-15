@@ -75,7 +75,19 @@ The test is run to see if the input stored to the `username` variable consists o
 
 ### verify_first_choice() function:
 
-This function gives the user the first options within the game, to start the game or display the gameplay instructions. Logic is included to check which option is returned from the user, and an else catches "other" responses to display an error and prompt the user to enter a valid response either 1 or 2 in this case.
+This function gives the user the first options within the game, to start the game or display the gameplay instructions. 
+
+An `if elif` statement handles input of 1 - calls start_game() 
+
+![Start Game](documentation/new_game.png)
+
+or 2 - calls display_instructions()
+
+![Rules](documentation/rules.png)
+
+An `else` then handles any incorrect entries and loops the user back, re displaying the choices again
+
+![First choice error](documentation/first_choice_error.png)
 
 ### display_current_option() function:
 
