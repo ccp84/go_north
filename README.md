@@ -130,8 +130,23 @@ However if the user input does not pass the initial `if` statement an `else` sta
 
 ### handle_response() function:
 
-This function calls on the `verify_response()` function to gain the users next validated pathway choice. It then extracts the game's storyline response from the Pathway object's options dictionary and displays the next part of the story to the user. Using an if statement, the function then gets the `True` or `False` indicator attached to the choice made by the user to decide if `True` the game levels up and continues along the game path or if `False` .....
-![Death](documentation/death.png)
+This function first calls `verify_response()` to get a path choice from the user. If the option to quit the game has been selected, the screen is cleared and the game resets ready for another user to play by calling `main()`. However if one of the paths has been chosen then the game continues and a number of checks happen to increase or decrease the users game level. 
+
+First of all the relevant path is found by returning the list associated with `game_level + 1`, this path is a dictionary of all 4 choices the user could have picked from at this level of the game. The `outcome` is set to the key associated with the choice that the user made. 
+
+If `outcome[2]` is `True` it means the user selected 'Loot' or a 'Cheat Code', logic checks if the game level is less than 5 in which case their level should advance however if `game_level` is now `>= 5` the loop will break and return to the main game flow where a congratulatory message is displayed (see start_game() function):
+
+![Level advance](documentation/increase.png)
+
+`elif` a `False` returned would mean they selected a 'Curse' or 'Monster' but lives remain `game_level - 1 >= 0` and their level should be decreased:
+
+![Level decrease](documentation/decrease.png)
+
+The final `else` statement means none of the above conditions were met, so the level cannot be increased and no lives remain. Unfortunatly that means game over this time. The relevant message is displayed on screen and the user is given the option to start a new game:
+
+![Death](documentation/no_lives.png)
+
+
 
 
 
