@@ -106,6 +106,8 @@ def display_instructions(name):
 def start_game(username):
     """
     Builds game object and game path
+    Handles game loop while user gains levels
+    Returns user to the start game option once level 5 reached
     """
     clear_terminal()
     print("\n New game building... \n")
