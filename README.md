@@ -144,7 +144,7 @@ If `outcome[2]` is `True` it means the user selected 'Loot' or a 'Cheat Code', l
 
 ![Level decrease](documentation/decrease.png)
 
-The final `else` statement means none of the above conditions were met, so the level cannot be increased and no lives remain. Unfortunately, that means game over this time. The relevant message is displayed on screen and the user is given the option to start a new game:
+The final `else` statement means none of the above conditions were met, so the level cannot be increased and no lives remain. Unfortunately, that means game over this time. The relevant message is displayed on screen and the user is given the option to start a new game, display the rules, or quit to the title screen.:
 
 ![Death](documentation/no_lives.png)
 
