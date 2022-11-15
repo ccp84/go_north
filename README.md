@@ -1,9 +1,11 @@
 # Go North - A Text-Based Adventure Game
 
+![Title Screen](documentation/title_screen.png)
+
 * [Play deployed game here](https://go-north.herokuapp.com/)
 
 ## Concept
-Go North is aimed at Munckin and D&D players who are fans of the [John Robertsons live action text based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
+Go North is aimed at Munckin and D&D players who are fans of [John Robertsons live action text based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
 Users begin as a level 0 adventurer. By selecting from on screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
 'Loot' and 'Cheat Codes will gain levels. 'Monsters' or 'Curses' will loose levels.
 Loose too many levels and it's game over.
@@ -50,6 +52,11 @@ Call main()
 ```
 ## Project Development
 
+### display_title_screen() function:
+
+This function uses a multi line string to print the title art to the screen at the start of the game, and then displays a welcome message introducing the game. 
+![Title screen](documentation/title_screen.png)
+
 ### verify_username() function:
 
 This function gives the user a keyboard input and saves to the username variable. This is checked for alphabetic only characters using `isalpha()`. If this returns true, the user is welcomed to the game and the function returns the username to the main function to contiue running. If this returns false, an error message is displayed to prompt the user to enter only alpha characters and to try again. 
@@ -71,6 +78,8 @@ This function asks for a choice from the available game path choices displayed b
 
 This function calls on the `verify_response()` function to gain the users next validated pathway choice. It then extracts the game's storyline response from the Pathway object's options dictionary and displays the next part of the story to the user. Using an if statement, the function then gets the `True` or `False` indicator attached to the choice made by the user to decide if `True` the game levels up and continues along the game path or if `False` .....
 ![Death](documentation/death.png)
+
+
 
 ### build_story() function
 
