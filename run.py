@@ -111,18 +111,21 @@ def start_game(username):
     """
     clear_terminal()
     print("\n New game building... \n")
+    # Build new game object
     new_game = Game(username)
     print(new_game)
-
+    # Start main game loop up to level 5
     while new_game.game_level < 5:
         display_option(new_game)
         handle_response(new_game)
+    # Display winning message once level 5 is hit
     print(f"""
     Congratulations {username}.
     You are promoted to a top rank adventurer.
     Glory and admiration are yours.
 
     """)
+    # Return user to start menu
     verify_first_choice(username)
 
 
