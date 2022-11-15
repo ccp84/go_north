@@ -168,17 +168,24 @@ def handle_response(current_game):
     Handles the logic of game advancement
     Call verification
     If response True is advance display next set of options
-    If response is False. Game over. Take user back to start game screen.
+    If response is False go backwards a level.
+    Game level -1 = break loop and return to start
     """
+    # Get verified user response
     choice = verify_response()
+    # Exit response - clear screen and return to start
     if choice == "x":
         clear_terminal()
         main()
     else:
+        # Set path to the list indexed by current level +1
         path = current_game.gamepath.options[current_game.game_level + 1]
+        # Set outcome to the key 'choice' in the path dictionary
         outcome = path[choice]
+        # If the outcome = true go up a level
         if outcome[2]:
             current_game.game_level += 1
+            # If level is less than 5, continue playing
             if current_game.game_level < 5:
                 clear_terminal()
                 print(f"""
@@ -193,6 +200,7 @@ You must continue on your quest {current_game.name}!
                 print(f"""
 {outcome[1]}
             """)
+        # If outcome is false but lives remain, give a warning
         elif (current_game.game_level - 1) >= 0:
             current_game.game_level -= 1
             clear_terminal()
@@ -203,6 +211,7 @@ Take heed, your adventurer level is now {current_game.game_level}.
 Loosing too many lives will cost you the game {current_game.name}.
 
         """)
+        # Lives now <0 print end of game message and return to start
         else:
             clear_terminal()
             print(f"""
