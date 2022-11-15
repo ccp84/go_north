@@ -83,9 +83,11 @@ An `if elif` statement handles input of 1 - calls `start_game()`
 
 ![Start Game](documentation/new_game.png)
 
-or 2 - calls `display_instructions()`
+2 - calls `display_instructions()`
 
 ![Rules](documentation/rules.png)
+
+3 - calls `main()` and returns the user to the title screen
 
 An `else` then handles any incorrect entries and loops the user back, displaying the choices again
 
