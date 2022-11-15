@@ -10,7 +10,34 @@ Users begin as a level 0 adventurer. By selecting from on-screen options as they
 'Loot' and 'Cheat Codes' will gain levels. 'Monsters' or 'Curses' will lose levels.
 Lose too many levels and it's game over.
 
-Overview of gameplay
+## Table of Contents
+
+1. [Overview of Gameplay](#overview-of-gameplay)
+2. [User Stories](#user-stories)
+3. [Gameplay Logic](#gameplay-logic)
+4. [Project Development](#project-development)
+    1. [display_title_screen](#display_title_screen-function)
+    2. [clear_terminal](#clear_terminal-function)
+    3. [verify_username](#verify_username-function)
+    4. [verify_first_choice](#verify_first_choice-function)
+    5. [display_instructions](#display_instructions-function)
+    6. [start_game](#start_game-function)
+    7. [display_option](#display_option-function)
+    8. [verify_response](#verify_response-function)
+    9. [handle_response](#handle_response-function)
+    10. [main](#main-function)
+    11. [build_story](#build_story-function)
+    12. [Game Class](#game-class)
+    13. [Pathway Class](#pathway-class)
+5. [Testing](#testing)
+6. [Future Features](#future-features)
+7. [Deployment](#deployment)
+    1. [Local deployment](#local-deployment)
+    2. [Heroku deployment](#heroku-deployment)
+8. [Technologies used](#technologies-used)
+9. [Credits](#credits)
+
+## Overview of Gameplay
 
 ![Gameplay Flowchart](documentation/gameplay.png)
 
