@@ -217,7 +217,7 @@ Loosing too many lives will cost you the game {current_game.name}.
         else:
             clear_terminal()
             print(f"""
-
+{outcome[1]}
 Your adventurer level is reduced beyond 0, no lives remain.
 Better luck next time {current_game.name}.
 
