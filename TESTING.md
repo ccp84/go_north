@@ -46,4 +46,4 @@ Both python files pass through the Code Institute PEP8 validator with no errors:
 ![story.py screenshot](documentation/storypy_verify.png)
 
 
-* [Back to README](README.md)
+* [Back to README](README.md#testing)
