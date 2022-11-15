@@ -11,6 +11,7 @@ Users begin as a level 0 adventurer. By selecting from on screen options as they
 Loose too many levels and it's game over.
 
 Overview of gameplay
+
 ![Gameplay Flowchart](documentation/gameplay.png)
 
 ## User Stories
@@ -55,6 +56,7 @@ Call main()
 ### display_title_screen() function:
 
 This function uses a multi line string to print the title art to the screen at the start of the game, and then displays a welcome message introducing the game. 
+
 ![Title screen](documentation/title_screen.png)
 
 ### clear_terminal() function:
@@ -77,17 +79,23 @@ The test is run to see if the input stored to the `username` variable consists o
 
 This function gives the user the first options within the game, to start the game or display the gameplay instructions. 
 
-An `if elif` statement handles input of 1 - calls start_game() 
+An `if elif` statement handles input of 1 - calls `start_game()` 
 
 ![Start Game](documentation/new_game.png)
 
-or 2 - calls display_instructions()
+or 2 - calls `display_instructions()`
 
 ![Rules](documentation/rules.png)
 
-An `else` then handles any incorrect entries and loops the user back, re displaying the choices again
+An `else` then handles any incorrect entries and loops the user back, displaying the choices again
 
 ![First choice error](documentation/first_choice_error.png)
+
+### display_instructions() function:
+
+This function first makes use of the `clear_terminal()` function to clear the screen. It prints out the game instructions using a multi line string, and then calls `verify_first_choice()` to loop the user back to their start of game choices once again.
+
+![Display instructions](documentation/display_instructions.png)
 
 ### display_current_option() function:
 
