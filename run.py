@@ -20,7 +20,6 @@ def display_title_screen():
      GGG    OOO    N   N   OOO   R   R    T    H   H
      """)
     print("""
-
     Welcome to the room Adventurer!
     Your challenge, should you accept, is to
     advance to a level 5 adventurer and escape.
@@ -28,7 +27,6 @@ def display_title_screen():
     Loot or cheat codes will advance your adventurer level.
     Monsters and curses will send you backwards...
     ... or worse.
-
      """)
 
 
