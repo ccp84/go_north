@@ -7,7 +7,7 @@
 ## Concept
 Go North is aimed at Munchkin and D&D players who are fans of [John Robertsons live-action text-based adventure The Dark Room](https://www.thejohnrobertson.com/thedarkroom/).
 Users begin as a level 0 adventurer. By selecting from on-screen options as they go through the game, they can gain or loose levels on their quest to become a level 5 adventurer! 
-'Loot' and 'Cheat Codes will gain levels. 'Monsters' or 'Curses' will lose levels.
+'Loot' and 'Cheat Codes' will gain levels. 'Monsters' or 'Curses' will lose levels.
 Lose too many levels and it's game over.
 
 Overview of gameplay
@@ -152,7 +152,75 @@ Main is the first function called when the program is run and initiates gameplay
 
 ### build_story() function
 
-This function is called when building the Pathway object and contains a randomly generated storyline each game. It uses 3 text files to combine positive, negative and winning scenarios to make a replayable story. For each level, the positives are shuffled and 2 options are added to the level container followed by 2 options from a shuffled negatives list. This level list is shuffled, and then appended to the overall story dictionary. The final level is constructed from 2 choices from a shuffled winning choices list and 2 choices from the remaining negatives list before being shuffled and appended to the storyline dictionary. The full story dictionary is returned by the function as the options attribute of the Pathway object.
+This function is called when building the Pathway object and contains a randomly generated storyline for each game. It is imported from the `story.py` file.
+
+The first task of building the game story is to create 4 levels containing 3 positive 1 negative outcome. This is started by initialising 2 empty lists called 'positives' and 'negatives' and then reading from text files a line at a time into those relevant lists:
+
+```py
+with open("positive.txt") as positive:
+    for line in positive:
+        new_line = line.strip('\n')
+        positives.append(new_line)
+```
+
+After this code has run for both positive and negative options the lists are shuffled using `shuffle()`. 
+
+Next, a `while` loop is used to build the first 4 levels. A `current_level` counter is initialised to 1 and a blank `storyline` dictionary is created. 
+
+```py
+current_level = 1
+storyline = {}
+while current_level < 5:
+    level_options = []
+    level_options.extend([positives.pop(),
+                        positives.pop(),
+                        positives.pop(),
+                        negatives.pop()])
+random.shuffle(level_options)
+```
+
+A blank list is temporarily created within the `while` loop so that it is reset each time the loop starts for a new level. This list is then populated with 3 items from the shuffled positives list and 1 item from the shuffled negatives list. `pop()` is used so that the item is removed from the main storage list and will not be repeated in a different level during the same game. The level list is then shuffled so that A, B, C and D are randomised each level for finding positive and negative responses. 
+
+Still within the `while` loop. The level list is used to build each level of the storyline dictionary. The `current_level` is used as a key and then a dictionary is built as the value for that key. The inner dictionary has keys a, b, c and d, and lists as the items returned from the positive and negative lists. 
+
+```py
+storyline[current_level] = {
+        "a": ast.literal_eval(level_options[0]),
+        "b": ast.literal_eval(level_options[1]),
+        "c": ast.literal_eval(level_options[2]),
+        "d": ast.literal_eval(level_options[3])
+ }
+current_level += 1
+```
+
+I used code from [Stack overflow](https://stackoverflow.com/questions/53052277/add-string-to-dictionary-without-quotes-in-python) to solve the problem of additional apostrophes being returned when building my lists from text files. 
+
+The final level of the game is built with 2 options from the winning text file and 2 options from the negatives text file but following the same mechanics as above. 
+
+```py
+winning = []
+ending = []
+with open("winners.txt") as winners:
+    for line in winners:
+        new_line = line.strip('\n')
+        winning.append(new_line)
+random.shuffle(winning)
+ending.extend([winning.pop(),
+                winning.pop(),
+                negatives.pop(),
+                negatives.pop()])
+random.shuffle(ending)
+storyline[current_level] = {
+    "a": ast.literal_eval(ending[0]),
+    "b": ast.literal_eval(ending[1]),
+    "c": ast.literal_eval(ending[2]),
+    "d": ast.literal_eval(ending[3])
+}
+```
+
+Finally, the function returns a fully build randomised storyline back to the `options` attribute of the `Pathway` object. 
+
+
 
 ## Testing
 
