@@ -1,5 +1,13 @@
 # Testing
 
+## Table of Contents
+
+1. [User Stories](#user-stories)
+2. [Bugs encountered during development](#bugs-encountered-and-fixed-during-production)
+3. [Bugs remaining](#bugs-remaining)
+4. [Manual Testing](#manual-testing)
+5. [PEP8 Validation](#code-validation-with-ci-validation-app)
+
 ## User Stories
 
 | Test  | Outcome | Proof |
