@@ -218,8 +218,12 @@ storyline[current_level] = {
 }
 ```
 
-Finally, the function returns a fully build randomised storyline back to the `options` attribute of the `Pathway` object. 
+Finally, the function returns a fully built randomised storyline back to the `options` attribute of the `Pathway` object. 
 
+### Game Class
+
+
+### Pathway Class
 
 
 ## Testing
@@ -229,7 +233,9 @@ Finally, the function returns a fully build randomised storyline back to the `op
 
 ## Future Features
 
-Given more time and scope to develop this project, I would have liked to allow users to select the difficuly of the game allowing for shorter / longer game lengths. I would have also liked to work on developing the storyline to give better flow of responses and options, and build in a choice of pathways to take for further replayability. 
+Given more time and scope to develop this project, 
+* I would have liked to allow users to select the difficuly of the game allowing for shorter / longer game lengths. 
+* I would have liked to work on developing the storyline to give better flow of responses and options, and build in a choice of pathways to take for further replayability. 
 
 ## Deployment
 ​
