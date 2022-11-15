@@ -54,7 +54,7 @@ def verify_username():
     while name_check:
         username = input("\nWhat is your name?\n:")
         if username.isalpha():
-            print(f"Hi {username}")
+            print(f"Hi {username}, welcome to the room")
             """
             Once name is verified as being valid,
             Set check indicator to false, this will
