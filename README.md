@@ -57,6 +57,10 @@ Call main()
 This function uses a multi line string to print the title art to the screen at the start of the game, and then displays a welcome message introducing the game. 
 ![Title screen](documentation/title_screen.png)
 
+## clear_terminal() function:
+
+The code for this function was researched from [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) and when called, clears all previous text from the mock terminal placing the most recent output at the top of a clean window. This keeps the game flow fresh and easy to read for the user. 
+
 ### verify_username() function:
 
 This function gives the user a keyboard input and saves to the username variable. This is checked for alphabetic only characters using `isalpha()`. If this returns true, the user is welcomed to the game and the function returns the username to the main function to contiue running. If this returns false, an error message is displayed to prompt the user to enter only alpha characters and to try again. 
