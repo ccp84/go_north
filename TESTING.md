@@ -35,7 +35,7 @@ Exit back to the start point at any time. | The user is given the option to quit
 | Test | Expected Outcome | Outcome | Proof |
 | ---  | -----------------| ------- | ----- |
 |Username input| Only alpha characters accepted. | Tried entering : A number, a character, a space, just hitting enter - all returned an error message informing me this was an invalid entry and that the username must contain letters only. | ![Username verification testing](documentation/player_name_testing.png) |
-| Choosing between 'Start Game', 'How to Play' and 'Exit' | Only '1' or '2' is accepted | Tried entering : 5, a letter, a space, a character, and a blank entry. These all returned an error message stating to enter 1 or 2. Entering 2 displayed a test string in place of the full game rules, entering 1 started the game flow. Confirmed that 3 returns the user to the title screen. | ![Initial choice testing](documentation/initial_choice_testing.png) |
+| Choosing between 'Start Game', 'How to Play' and 'Exit' | Only '1', '2' or '3' is accepted | Tried entering : 5, a letter, a space, a character, and a blank entry. These all returned an error message stating to enter 1 or 2. Entering 2 displayed a test string in place of the full game rules, entering 1 started the game flow. Confirmed that 3 returns the user to the title screen. | ![Initial choice testing](documentation/initial_choice_testing.png) |
 | Choosing a b c or d as the game path option | Only A, a, B, b, C, c, D, d, X, or x should be accepted. | Tests showed that entering e, /, space, blank, or 5 returned an error message that this was an invalid entry and to select from the given options. | ![User path testing](documentation/game_path_choice_test.png) |
 
 
