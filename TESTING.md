@@ -17,6 +17,8 @@
 |Find out how to play the game.| The user can select to display the rules at the start of each game.|![Rules](documentation/rules.png)|
 Exit back to the start point at any time. | The user is given the option to quit the game during each selection point of the game. | ![Exit screenshot](documentation/exit.png)
 
+[Back to top](#testing)
+
 ## Bugs encountered and fixed during production
 
 * [verify_first_choice() if statement](https://github.com/ccp84/go_north/issues/1)
@@ -34,9 +36,13 @@ Exit back to the start point at any time. | The user is given the option to quit
 * [Issue appending to dictionary adding apostrophes](https://github.com/ccp84/go_north/issues/5)
 ![Issue 5 screenshot](documentation/issue_5.png)
 
+[Back to top](#testing)
+
 ## Bugs Remaining
 
 * Tests carried out revealed no remaining bugs to the best of my knowledge.
+
+[Back to top](#testing)
 
 ## Manual Testing
 
@@ -46,6 +52,7 @@ Exit back to the start point at any time. | The user is given the option to quit
 | Choosing between 'Start Game', 'How to Play' and 'Exit' | Only '1', '2' or '3' is accepted | Tried entering : 5, a letter, a space, a character, and a blank entry. These all returned an error message stating to enter 1 or 2. Entering 2 displayed a test string in place of the full game rules, entering 1 started the game flow. Confirmed that 3 returns the user to the title screen. | ![Initial choice testing](documentation/initial_choice_testing.png) |
 | Choosing a b c or d as the game path option | Only A, a, B, b, C, c, D, d, X, or x should be accepted. | Tests showed that entering e, /, space, blank, or 5 returned an error message that this was an invalid entry and to select from the given options. | ![User path testing](documentation/game_path_choice_test.png) |
 
+[Back to top](#testing)
 
 ## Code validation with CI validation app
 
@@ -53,5 +60,6 @@ Both python files pass through the Code Institute PEP8 validator with no errors:
 ![run.py screenshot](documentation/runpy_verify.png)
 ![story.py screenshot](documentation/storypy_verify.png)
 
+[Back to top](#testing)
 
-* [Back to README](README.md#testing)
+[Back to README](README.md#testing)
