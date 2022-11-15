@@ -14,7 +14,7 @@ def display_title_screen():
      GGG    OOO    N   N   OOO   RRRR   TTTTT  H   H
     G   G  O   O   NN  N  O   O  R   R    T    H   H
     G      O   O   N N N  O   O  R   R    T    H   H
-    GGGGG  O   O   N  NN  O   O  RRRR     T    HHHHH
+    G GGG  O   O   N  NN  O   O  RRRR     T    HHHHH
     G   G  O   O   N   N  O   O  R R      T    H   H
     G   G  O   O   N   N  O   O  R  R     T    H   H
      GGG    OOO    N   N   OOO   R   R    T    H   H
