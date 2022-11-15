@@ -134,7 +134,7 @@ def display_option(current_game):
     Displays the current options from the Pathway object
     """
     display_level = current_game.game_level + 1
-    # Get the list of options at the index of the current game level
+    # Get the list of options at the index of the current display level
     game_path = current_game.gamepath.options[display_level]
     print("Which choice will you make?\n")
     print(f'A {game_path["a"][0]}')

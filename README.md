@@ -101,16 +101,20 @@ This function first makes use of the `clear_terminal()` function to clear the sc
 
 The `start_game()` function is responsible for the main running of the game. It firstly uses the `clear_terminal()` function to clear the game window ensuring the new game starts at the top of the screen. It then builds a new game using the `Game` class storing this as the object `new_game`. Within this object the journey the user is taken on is stored in an object built from the `Pathway` class. 
 
-A `while` loop is initialised, checking against `new_game.game_level` which will hold the user in the current game. During this time they are guided through the pathway with `display_current_option()` showing them each set of 4 options to choose from, and `handle_response()` either increasing or decreasing their `game_level` based on the option chosen.
+A `while` loop is initialised, checking against `new_game.game_level` which will hold the user in the current game. During this time they are guided through the pathway with `display_option()` showing them each set of 4 options to choose from, and `handle_response()` either increasing or decreasing their `game_level` based on the option chosen.
 
 When `game_level > 5` and the user becomes a Level 5 Adventurer the `while` loop is broken, a congratulatory message is displayed and the user is returned to the start menu by calling `verify_first_choice()`.
 
 ![Level 5 message](documentation/level_5.png)
 
-### display_current_option() function:
+### display_option() function:
 
-This function takes in the Game object from where it is called and uses the Pathway object, and the game level of the current game to determine which set of options to display to the user. 
-The game path is a set of lists within the Pathway object, by using the current game level as an index for the list of lists, this function then gives the user the correct set of on screen options.
+This function takes in the `current_game` object as an argument and uses the `gamepath` attribute of that object to determine the set of options that should be displayed for the users current level.
+The `gamepath` is an object of the `Pathway` class which builds itself from `story.py`.
+
+`display_level` is set to `game_level + 1` to account for the initial level starting at 0 and the timing of calculations meaning an index of -1 being passed to the options list just before 'death'. The `display_level` is used as an index to retrieve the list of options linked to the current level of play from `gamepath`. 
+
+![Display options](documentation/options.png)
 
 ### verify_response() function:
 
